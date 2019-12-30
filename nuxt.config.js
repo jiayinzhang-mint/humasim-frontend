@@ -74,6 +74,11 @@ export default {
           success: colors.green.accent3
         }
       }
+    },
+    defaultAssets: false,
+    treeShake: true,
+    options: {
+      customProperties: true
     }
   },
   /*

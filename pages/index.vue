@@ -1,12 +1,13 @@
 <template>
-  <div>
+  <v-app>
     INSDIM
-  </div>
+  </v-app>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
+@Component({ name: 'index' })
 export default class Index extends Vue {}
 </script>
 
