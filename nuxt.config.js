@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/es5/util/colors';
 
 export default {
   mode: 'universal',
@@ -37,7 +37,8 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxt/typescript-build'
   ],
   /*
    ** Nuxt.js modules
@@ -84,4 +85,4 @@ export default {
      */
     extend(config, ctx) {}
   }
-}
+};
