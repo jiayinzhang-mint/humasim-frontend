@@ -34,7 +34,7 @@ import { NuxtVueI18n } from 'nuxt-i18n';
 export default class HomeSideNav extends Vue {
   private navItems = [
     {
-      path: 'index',
+      path: 'news',
       title: 'links.news'
     },
     {

@@ -24,7 +24,7 @@ export default (context) => {
         joinUs: '加入我们',
         contactUs: '通讯方式',
 
-        architector: '建筑设计师',
+        architect: '建筑设计师',
         interiorDesigner: '室内设计师',
         productDesigner: '产品设计师',
         developer: '开发者',

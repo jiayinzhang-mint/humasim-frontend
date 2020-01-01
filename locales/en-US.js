@@ -25,7 +25,7 @@ export default (context) => {
         joinUs: 'join us ',
         contactUs: 'connect',
 
-        architector: 'architector',
+        architect: 'architect',
         interiorDesigner: 'interior designer',
         productDesigner: 'product designer',
         developer: 'developer',

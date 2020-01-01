@@ -10,6 +10,7 @@
           <v-flex xs9> <nuxt /> </v-flex>
         </v-layout>
       </v-container>
+      <Footer></Footer>
     </v-content>
   </v-app>
 </template>
@@ -19,9 +20,10 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import '@/assets/style.css';
 
 import SideNav from '@/components/home/side-nav.vue';
+import Footer from '@/components/home/footer.vue';
 
 @Component({
-  components: { SideNav }
+  components: { SideNav, Footer }
 })
 export default class Default extends Vue {
   private nav: boolean = true;

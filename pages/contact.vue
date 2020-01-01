@@ -10,7 +10,7 @@
     <p>mint@insdim.com</p>
 
     <h3 class="mt-10">{{ $t(`contact.joinUs`) }}</h3>
-    <li>{{ $t(`contact.architector`) }}</li>
+    <li>{{ $t(`contact.architect`) }}</li>
     <p>
       {{ $t(`contact.skills`) }} - AutoCAD / VectorWorks / RhinoCeros / v-ray /
       Affinity Suite
@@ -41,7 +41,7 @@
     </p>
 
     <li>{{ $t(`contact.internship`) }}</li>
-    <p>{{ $t(`contact.skills`) }} - hinoceros / keyshot / affinity suite</p>
+    <p>{{ $t(`contact.skills`) }} - rhinoceros / keyshot / affinity suite</p>
 
     <h3 class="mt-10">{{ $t(`contact.application`) }}</h3>
     <p>join@insdim.com</p>
