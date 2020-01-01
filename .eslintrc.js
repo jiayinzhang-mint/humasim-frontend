@@ -35,7 +35,8 @@ module.exports = {
     'linebreak-style': 0,
     indent: 0,
     'vue/no-unused-vars': 'off',
-    'no-unused-vars': 'off'
+    'no-unused-vars': 'off',
+    endOfLine: 'off'
   },
   parserOptions: {
     parser: 'babel-eslint',

@@ -2,3 +2,11 @@
 //
 // The variables you want to modify
 $body-font-family: 'Dosis';
+
+@import '~vuetify/src/styles/styles.sass';
+$material-light: map-deep-merge(
+  $material-light,
+  (
+    'background': '#fff'
+  )
+);
