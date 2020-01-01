@@ -11,13 +11,31 @@ export default (context) => {
         en: 'en',
         cn: 'cn'
       },
-      home: {
-        title: 'Welcome',
-        introduction: 'This is an introduction in English.'
-      },
       about: {
-        title: 'About',
-        introduction: 'This page is made to give you more informations.'
+        ourDimension: 'our dimension',
+        serviceContent: 'spacial // product // graphic // development',
+        subsidiaries: 'subsidiaries',
+        partners: 'partners'
+      },
+      contact: {
+        address: 'address',
+        addressDetail:
+          'ROOM 201, NO. 12, 1895 LANE, HUTAIZHI ROAD, JING`AN DISTRICT, SHANGHAI, CHINA',
+        service: 'service',
+        joinUs: 'join us ',
+        contactUs: 'connect',
+
+        architector: 'architector',
+        interiorDesigner: 'interior designer',
+        productDesigner: 'product designer',
+        developer: 'developer',
+        graphicDesigner: 'graphic designer',
+        internship: 'internship',
+        skills: 'skills',
+
+        application: 'application',
+        cv: 'c.v.',
+        portfolio: 'portfolio'
       }
     });
   });

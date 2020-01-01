@@ -7,6 +7,12 @@ $body-font-family: 'Dosis';
 $material-light: map-deep-merge(
   $material-light,
   (
-    'background': '#fff'
+    'background': #fff
+  )
+);
+$material-dark: map-deep-merge(
+  $material-dark,
+  (
+    'background': #242424
   )
 );

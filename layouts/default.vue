@@ -24,7 +24,20 @@ import SideNav from '@/components/home/side-nav.vue';
   components: { SideNav }
 })
 export default class Default extends Vue {
-  nav: boolean = true;
+  private nav: boolean = true;
+
+  private detectTheme() {
+    if (matchMedia('(prefers-color-scheme: dark)').matches) {
+      /* your dark mode code */
+      this.$vuetify.theme.dark = true;
+    } else {
+      this.$vuetify.theme.dark = false;
+    }
+  }
+
+  private mounted() {
+    this.detectTheme();
+  }
 }
 </script>
 

@@ -6,18 +6,29 @@
       <v-list-item
         v-for="(item, i) in navItems"
         :key="`n-${i}`"
+        active-class="nav-active"
         :to="localePath(item.path)"
       >
-        <v-list-item-title class="body-2 ">{{
+        <v-list-item-title class="nav-link">{{
           $t(item.title)
         }}</v-list-item-title>
       </v-list-item>
+    </v-list>
+
+    <v-list dense nav width="40" class="px-0">
+      <v-list-item :to="switchLocalePath('cn')"
+        ><v-list-item-title>CN</v-list-item-title></v-list-item
+      >
+      <v-list-item :to="switchLocalePath('en')"
+        ><v-list-item-title>EN</v-list-item-title></v-list-item
+      >
     </v-list>
   </v-container>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { NuxtVueI18n } from 'nuxt-i18n';
 
 @Component
 export default class HomeSideNav extends Vue {
