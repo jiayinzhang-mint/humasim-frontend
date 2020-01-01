@@ -10,6 +10,15 @@ class NewsService {
       return Promise.reject(new Error(rsp.data));
     }
   }
+
+  static async getOneNews(_id: string) {
+    const rsp = await BasicService.getRequest('/public/news', { _id });
+    if (rsp.code === 200 && rsp.data.news) {
+      return Promise.resolve(rsp.data.news as News);
+    } else {
+      return Promise.reject(new Error(rsp.data));
+    }
+  }
 }
 
 export default NewsService;

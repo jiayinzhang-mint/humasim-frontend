@@ -11,6 +11,10 @@ export default (context) => {
         en: 'en',
         cn: 'cn'
       },
+      news: {
+        learnMore: 'learn more',
+        backHome: 'back home'
+      },
       about: {
         ourDimension: 'our dimension',
         serviceContent: 'spacial // product // graphic // development',
