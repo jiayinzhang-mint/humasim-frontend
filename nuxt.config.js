@@ -88,11 +88,5 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  },
-  pwa: {
-    icon: {
-      iconSrc: '/INSDIM.svg',
-      iconFileName: 'INSDIM.svg'
-    }
   }
 };
