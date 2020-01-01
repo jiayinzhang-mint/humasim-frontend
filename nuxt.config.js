@@ -67,14 +67,21 @@ export default {
         lazy: true,
         langDir: 'locales/'
       }
-    ]
+    ],
+    '@nuxtjs/axios'
   ],
 
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api/': 'http://127.0.0.1:9000',
+    '/public/': 'http://127.0.0.1:9000'
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module

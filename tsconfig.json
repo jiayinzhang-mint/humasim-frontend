@@ -15,7 +15,13 @@
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@types/node", "@nuxt/types", "nuxt-i18n", "vuetify"],
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+      "nuxt-i18n",
+      "vuetify",
+      "@nuxtjs/axios"
+    ],
     "experimentalDecorators": true
   },
   "exclude": ["node_modules"]
