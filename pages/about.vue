@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <h1>{{ $t(`links.news`) }}</h1>
+    <h1>{{ $t(`links.about`) }}</h1>
   </v-app>
 </template>
 

@@ -39,7 +39,7 @@ module.exports = {
     endOfLine: 'off'
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
     ecmaFeatures: { legacyDecorators: true }
   }
 };

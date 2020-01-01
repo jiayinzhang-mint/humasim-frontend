@@ -27,10 +27,11 @@ export default {
    ** Global CSS
    */
   css: [],
+
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+
   /*
    ** Nuxt.js dev-modules
    */
@@ -48,8 +49,27 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    [
+      'nuxt-i18n',
+      {
+        defaultLocale: 'cn',
+        locales: [
+          {
+            code: 'en',
+            file: 'en-US.js'
+          },
+          {
+            code: 'cn',
+            file: 'zh-CN.js'
+          }
+        ],
+        lazy: true,
+        langDir: 'locales/'
+      }
+    ]
   ],
+
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -84,6 +104,8 @@ export default {
    ** Build configuration
    */
   build: {
+    cache: true,
+    parallel: true,
     /*
      ** You can extend webpack config here
      */

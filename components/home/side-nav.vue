@@ -1,0 +1,49 @@
+<template>
+  <v-container class="pl-10 pt-12">
+    <v-img class="mb-12" width="120" height="120" src="/icon.png"></v-img>
+
+    <v-list dense nav width="120" class="px-0">
+      <v-list-item
+        v-for="(item, i) in navItems"
+        :key="`n-${i}`"
+        :to="localePath(item.path)"
+      >
+        <v-list-item-title class="body-2 ">{{
+          $t(item.title)
+        }}</v-list-item-title>
+      </v-list-item>
+    </v-list>
+  </v-container>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator';
+
+@Component
+export default class HomeSideNav extends Vue {
+  private navItems = [
+    {
+      path: 'index',
+      title: 'links.news'
+    },
+    {
+      path: 'collection',
+      title: 'links.collection'
+    },
+    {
+      path: 'timeline',
+      title: 'links.timeline'
+    },
+    {
+      path: 'about',
+      title: 'links.about'
+    },
+    {
+      path: 'contact',
+      title: 'links.contact'
+    }
+  ];
+}
+</script>
+
+<style scoped></style>

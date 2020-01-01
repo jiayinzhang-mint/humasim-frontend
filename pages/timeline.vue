@@ -1,15 +1,14 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+  <v-app>
+    <h1>
+      {{ $t(`links.timeline`) }}
+    </h1>
+  </v-app>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import '@/assets/style.css';
 
 @Component
-export default class Default extends Vue {}
+export default class Index extends Vue {}
 </script>
-
-<style scoped></style>
