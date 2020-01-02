@@ -79,8 +79,7 @@ export default {
     proxy: true
   },
   proxy: {
-    '/api/': 'http://127.0.0.1:9000',
-    '/public/': 'http://127.0.0.1:9000'
+    '/api/': 'http://127.0.0.1:9090'
   },
   /*
    ** vuetify module configuration

@@ -9,7 +9,7 @@
           <p>{{ item.intro }}</p>
           <nuxt-link
             style="font-size:14px"
-            :to="`${localePath('news')}/${item._id}`"
+            :to="`${localePath('news')}/${item.id}`"
             >{{ $t('news.learnMore') }}</nuxt-link
           >
         </v-card>

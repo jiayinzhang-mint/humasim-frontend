@@ -1,22 +1,22 @@
-import { News } from '../types/news';
 import BasicService from './basicService';
+import { News } from '@/types/news';
 
 class NewsService {
   static async getNewsList() {
-    const rsp = await BasicService.getRequest('/public/news/list', {});
-    if (rsp.code === 200) {
-      return Promise.resolve(rsp.data.news as News[]);
+    const rsp = await BasicService.getRequest('/api/news/list', {});
+    if (rsp.msg === 'success') {
+      return Promise.resolve(rsp.news as News[]);
     } else {
-      return Promise.reject(new Error(rsp.data));
+      return Promise.reject(new Error(rsp.msg));
     }
   }
 
-  static async getOneNews(_id: string) {
-    const rsp = await BasicService.getRequest('/public/news', { _id });
-    if (rsp.code === 200 && rsp.data.news) {
-      return Promise.resolve(rsp.data.news as News);
+  static async getOneNews(id: string) {
+    const rsp = await BasicService.getRequest('/api/news', { id });
+    if (rsp.msg === 'success' && rsp.news) {
+      return Promise.resolve(rsp.news as News);
     } else {
-      return Promise.reject(new Error(rsp.data));
+      return Promise.reject(new Error(rsp.msg));
     }
   }
 }

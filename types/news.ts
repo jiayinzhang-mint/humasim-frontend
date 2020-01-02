@@ -1,22 +1,15 @@
 class News {
-  _id!: string;
+  id!: string;
   title!: string;
-  createTime!: string;
+  createdAt!: string;
   visibility!: boolean;
   author!: string;
   content!: string;
   contentEn!: string;
   intro!: string;
   introEn!: string;
-  pic?: Picture[];
-  titlePic?: Picture;
+  pic?: string[];
+  titlePic?: string;
 }
 
-class Picture {
-  title!: string;
-  url!: string;
-  name!: string;
-  createTime!: string;
-}
-
-export { News, Picture };
+export { News };
