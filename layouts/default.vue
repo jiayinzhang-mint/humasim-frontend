@@ -1,6 +1,10 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="nav" app color="rgb(36, 36, 36)">
+    <v-navigation-drawer
+      v-model="nav"
+      app
+      :color="$vuetify.theme.dark ? `rgb(36, 36, 36)` : 'white'"
+    >
       <SideNav></SideNav>
     </v-navigation-drawer>
 
@@ -42,6 +46,13 @@ export default class Default extends Vue {
     } else {
       this.$vuetify.theme.dark = false;
     }
+    setInterval(() => {
+      if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.$vuetify.theme.dark = true;
+      } else {
+        this.$vuetify.theme.dark = false;
+      }
+    }, 5000);
   }
 
   private mounted() {

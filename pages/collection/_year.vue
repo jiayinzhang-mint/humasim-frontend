@@ -62,6 +62,21 @@
           <v-card flat color="transparent">
             <h3 class="work-title mt-5">{{ item.title }}</h3>
             <span>FOR {{ item.client }}</span>
+            <v-img
+              src="https://picsum.photos/id/11/500/300"
+              lazy-src="https://picsum.photos/id/11/10/6"
+              class="grey lighten-2 mt-3"
+              max-height="312"
+            >
+              <template v-slot:placeholder>
+                <v-row class="fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular
+                    indeterminate
+                    color="grey lighten-5"
+                  ></v-progress-circular>
+                </v-row>
+              </template>
+            </v-img>
           </v-card>
           <hr />
         </div>
