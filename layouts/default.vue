@@ -1,13 +1,23 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="nav" app color="transparent">
+    <v-navigation-drawer v-model="nav" app color="rgb(36, 36, 36)">
       <SideNav></SideNav>
     </v-navigation-drawer>
-    <v-app-bar app dense flat color="transparent"></v-app-bar>
+
     <v-content>
+      <v-toolbar class="d-flex d-sm-none" height="100" flat color="transparent">
+        <v-btn icon @click="nav = !nav">
+          <i
+            style="font-size:30px"
+            class="menu iconfont icon-HAMBURGERMENU"
+          ></i>
+        </v-btn>
+      </v-toolbar>
+      <v-toolbar class="d-none d-sm-flex" dense flat color="transparent">
+      </v-toolbar>
       <v-container>
         <v-layout justify-center>
-          <v-flex xs9> <nuxt /> </v-flex>
+          <v-flex xs12 sm9> <nuxt /> </v-flex>
         </v-layout>
       </v-container>
       <Footer></Footer>

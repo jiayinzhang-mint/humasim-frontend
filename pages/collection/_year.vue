@@ -8,5 +8,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Index extends Vue {}
+export default class CollectionSingle extends Vue {}
 </script>
+
+<style scoped></style>

@@ -15,6 +15,9 @@ export default (context) => {
         learnMore: 'learn more',
         backHome: 'back home'
       },
+      collection: {
+        older: 'older'
+      },
       about: {
         ourDimension: 'our dimension',
         serviceContent: 'spacial // product // graphic // development',

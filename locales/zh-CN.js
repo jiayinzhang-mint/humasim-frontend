@@ -15,6 +15,9 @@ export default (context) => {
         learnMore: '了解更多',
         backHome: '回到首页'
       },
+      collection: {
+        older: '更多'
+      },
       about: {
         ourDimension: '我们的“维度”',
         serviceContent: '空间 // 产品 // 平面 // 开发',

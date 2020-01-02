@@ -55,7 +55,11 @@ p {
 }
 
 .nav-active {
-  background-color: #141414;
+  background-color: #141414 !important;
+}
+
+.v-list-item--link:before {
+  background-color: transparent !important;
 }
 
 .nav-link {
@@ -98,7 +102,7 @@ span {
 }
 
 section {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 hr {
