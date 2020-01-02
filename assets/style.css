@@ -1,5 +1,5 @@
 @import url('https://fonts.loli.net/css?family=Dosis|Open+Sans');
-@import url('https://at.alicdn.com/t/font_1033024_1mf6ivdb8s.css');
+@import url('https://cdn.staticfile.org/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.min.css');
 
 body {
   font-family: 'Dosis', 'Open Sans';
@@ -105,6 +105,12 @@ section {
   margin-top: 40px;
 }
 
+/* work */
+.work-title {
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
 hr {
   border: 0;
   background-color: #000;
@@ -130,5 +136,22 @@ hr {
   }
   hr {
     border-top: 1px solid #313131;
+  }
+}
+
+/* animation */
+
+.fade-left-enter {
+  animation: fade-left 0.4s;
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }

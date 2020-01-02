@@ -6,11 +6,8 @@
 
     <v-content>
       <v-toolbar class="d-flex d-sm-none" height="100" flat color="transparent">
-        <v-btn icon @click="nav = !nav">
-          <i
-            style="font-size:30px"
-            class="menu iconfont icon-HAMBURGERMENU"
-          ></i>
+        <v-btn large icon @click="nav = !nav">
+          <v-icon>mdi-menu</v-icon>
         </v-btn>
       </v-toolbar>
       <v-toolbar class="d-none d-sm-flex" dense flat color="transparent">
@@ -49,6 +46,7 @@ export default class Default extends Vue {
 
   private mounted() {
     this.detectTheme();
+    this.$vuetify.icons.iconfont = 'mdi';
   }
 }
 </script>

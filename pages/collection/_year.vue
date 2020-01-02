@@ -1,6 +1,72 @@
 <template>
   <v-app>
-    <h1>{{ $t(`links.collection`) }}</h1>
+    <div style="display:flex">
+      <h1>{{ $t(`links.collection`) }}</h1>
+      <v-spacer></v-spacer>
+
+      <div class="d-none d-sm-flex">
+        <transition appear appear-active-class="fade-left-enter">
+          <h1
+            v-if="year + 1 <= thisYear"
+            style="color:grey;user-select:none"
+            @click="setYear(year + 1)"
+          >
+            {{ year + 1 }}
+          </h1>
+        </transition>
+        <transition appear appear-active-class="fade-left-enter">
+          <h1 class="ml-3" style="user-select:none" @click="setYear(year)">
+            {{ year }}
+          </h1>
+        </transition>
+        <transition appear appear-active-class="fade-left-enter">
+          <h1
+            v-if="year - 1 >= 2014"
+            class="ml-3"
+            style="color:grey;;user-select:none"
+            @click="setYear(year - 1)"
+          >
+            {{ year - 1 }}
+          </h1>
+        </transition>
+      </div>
+
+      <div class="d-flex d-sm-none">
+        <v-btn
+          v-if="year + 1 <= thisYear"
+          class="mr-2"
+          icon
+          style="align-self:center"
+          @click="setYear(year + 1)"
+        >
+          <v-icon>mdi-chevron-left</v-icon>
+        </v-btn>
+
+        <h1 class="ml-3" @click="setYear(year)">
+          {{ year }}
+        </h1>
+
+        <v-btn
+          class="ml-2"
+          icon
+          style="align-self:center"
+          @click="setYear(year - 1)"
+        >
+          <v-icon>mdi-chevron-right</v-icon>
+        </v-btn>
+      </div>
+    </div>
+    <transition appear appear-active-class="fade-left-enter">
+      <section>
+        <div v-for="(item, i) in workList" :key="`n-${i}`">
+          <v-card flat color="transparent">
+            <h3 class="work-title mt-5">{{ item.title }}</h3>
+            <span>FOR {{ item.client }}</span>
+          </v-card>
+          <hr />
+        </div>
+      </section>
+    </transition>
   </v-app>
 </template>
 
@@ -12,13 +78,26 @@ import WorkService from '@/service/workService';
 @Component
 export default class CollectionSingle extends Vue {
   private workList: Work[] = [];
+  private loading: boolean = false;
 
   private async getWorkList() {
-    this.workList = await WorkService.getWorkList(this.year);
+    this.loading = true;
+    this.workList = await WorkService.getWorkList(String(this.year));
+    this.loading = false;
+  }
+
+  private setYear(y: string) {
+    if (!this.loading) {
+      this.$router.push(`${this.localePath('collection')}/${y}`);
+    }
   }
 
   private get year() {
-    return this.$route.params.year;
+    return Number(this.$route.params.year);
+  }
+
+  private get thisYear() {
+    return new Date().getFullYear();
   }
 
   private mounted() {

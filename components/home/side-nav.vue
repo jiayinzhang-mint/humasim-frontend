@@ -15,7 +15,7 @@
           }}</v-list-item-title>
         </v-list-item>
       </v-list>
-      <v-list nav dense class="mt-11">
+      <!-- <v-list nav dense class="mt-11">
         <v-list-item
           v-for="(item, i) in yearList"
           :key="`y-${i}`"
@@ -29,7 +29,7 @@
             $t('collection.older')
           }}</v-list-item-title>
         </v-list-item>
-      </v-list>
+      </v-list> -->
     </v-layout>
 
     <v-list dense nav width="40" class="px-0">
