@@ -4,7 +4,8 @@
       <h4 class="font-weight-black">{{ $t('news.backHome') }}</h4>
     </nuxt-link>
     <h2>{{ newsInfo.title }}</h2>
-    <p v-html="newsInfo.content"></p>
+    <p v-if="$i18n.locale === 'en'" v-html="newsInfo.contentEn"></p>
+    <p v-else-if="$i18n.locale === 'cn'" v-html="newsInfo.content"></p>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <div style="display:flex">
+    <div style="display:flex" class="px-1">
       <h1>{{ $t(`links.collection`) }}</h1>
       <v-spacer></v-spacer>
 
@@ -59,25 +59,45 @@
     <transition appear appear-active-class="fade-left-enter">
       <section>
         <div v-for="(item, i) in workList" :key="`n-${i}`">
-          <v-card flat color="transparent">
-            <h3 class="work-title mt-5">{{ item.title }}</h3>
-            <span>FOR {{ item.client }}</span>
-            <v-img
-              src="https://picsum.photos/id/11/500/300"
-              lazy-src="https://picsum.photos/id/11/10/6"
-              class="grey lighten-2 mt-3"
-              max-height="312"
+          <v-hover v-slot:default="{ hover }">
+            <v-card
+              :to="`${localePath('collection')}/work/${item.id}`"
+              :class="{ 'on-hover': hover }"
+              flat
+              color="transparent"
             >
-              <template v-slot:placeholder>
-                <v-row class="fill-height ma-0" align="center" justify="center">
-                  <v-progress-circular
-                    indeterminate
-                    color="grey lighten-5"
-                  ></v-progress-circular>
-                </v-row>
-              </template>
-            </v-img>
-          </v-card>
+              <v-container fluid class="pa-1">
+                <h3 class="work-title mt-5">{{ item.title }}</h3>
+                <span>FOR {{ item.client }}</span>
+                <v-img
+                  src="https://picsum.photos/id/11/500/300"
+                  lazy-src="https://picsum.photos/id/11/10/6"
+                  class="grey lighten-2 mt-3"
+                  max-height="312"
+                >
+                  <template v-slot:placeholder>
+                    <v-row
+                      class="fill-height ma-0"
+                      align="center"
+                      justify="center"
+                    >
+                      <v-progress-circular
+                        indeterminate
+                        color="grey lighten-5"
+                      ></v-progress-circular>
+                    </v-row>
+                  </template>
+                  <v-fade-transition>
+                    <div
+                      v-if="hover"
+                      class="d-flex transition-fast-in-fast-out black v-card--reveal display-3 white--text"
+                      style="height: 100%;"
+                    ></div>
+                  </v-fade-transition>
+                </v-img>
+              </v-container>
+            </v-card>
+          </v-hover>
           <hr />
         </div>
       </section>
@@ -121,4 +141,17 @@ export default class CollectionSingle extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style>
+.v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: 0.3;
+  position: absolute;
+  width: 100%;
+}
+
+.on-hover {
+  cursor: pointer;
+}
+</style>

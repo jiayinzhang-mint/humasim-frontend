@@ -16,7 +16,10 @@ export default (context) => {
         backHome: 'back home'
       },
       collection: {
-        older: 'older'
+        older: 'older',
+        backHome: 'back home',
+        collaborator: 'collaborator',
+        client: 'client'
       },
       about: {
         ourDimension: 'our dimension',

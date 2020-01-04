@@ -1,17 +1,21 @@
 <template>
   <v-app>
-    <h1>{{ $t(`links.news`) }}</h1>
+    <h1 class="px-1">{{ $t(`links.news`) }}</h1>
     <section>
       <div v-for="(item, i) in newsList" :key="`n-${i}`">
-        <v-card flat color="transparent">
-          <h3>{{ item.title }}</h3>
-          <span>{{ item.createTime }}</span>
-          <p>{{ item.intro }}</p>
-          <nuxt-link
-            style="font-size:14px"
-            :to="`${localePath('news')}/${item.id}`"
-            >{{ $t('news.learnMore') }}</nuxt-link
-          >
+        <v-card
+          :to="`${localePath('news')}/${item.id}`"
+          flat
+          color="transparent"
+        >
+          <v-container fluid class="pa-1">
+            <h3>{{ item.title }}</h3>
+            <span>{{ item.createTime }}</span>
+            <p>{{ item.intro }}</p>
+            <!-- <nuxt-link style="font-size:14px">{{
+              $t('news.learnMore')
+            }}</nuxt-link> -->
+          </v-container>
         </v-card>
         <hr />
       </div>

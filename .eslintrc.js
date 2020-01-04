@@ -35,6 +35,7 @@ module.exports = {
     'linebreak-style': 0,
     indent: 0,
     'vue/no-unused-vars': 'off',
+    'vue/no-v-html': 'off',
     'no-unused-vars': 'off',
     endOfLine: 'off'
   },

@@ -1,0 +1,41 @@
+<template>
+  <div>
+    <nuxt-link :to="`${localePath('collection')}/${work.year}`">
+      <h4 class="text-link font-weight-black">
+        {{ $t('collection.backHome') }}
+      </h4>
+    </nuxt-link>
+    <h2>{{ work.title }}</h2>
+    <h4>{{ $t('collection.client') }} - {{ work.client }}</h4>
+    <h4 v-if="work.collaborator">
+      {{ $t('collection.collaborator') }} - {{ work.collaborator }}
+    </h4>
+    <p v-if="$i18n.locale === 'en'" v-html="work.descriptionEn"></p>
+    <p v-else-if="$i18n.locale === 'cn'" v-html="work.description"></p>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Work } from '@/types/work';
+import WorkService from '@/service/workService';
+
+@Component
+export default class WorkSingle extends Vue {
+  private work: Work = new Work();
+
+  private async getWorkInfo() {
+    this.work = await WorkService.getOneWork(this.workID);
+  }
+
+  private get workID() {
+    return this.$route.params.id;
+  }
+
+  private mounted() {
+    this.getWorkInfo();
+  }
+}
+</script>
+
+<style scoped></style>

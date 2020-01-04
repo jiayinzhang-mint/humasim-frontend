@@ -16,7 +16,10 @@ export default (context) => {
         backHome: '回到首页'
       },
       collection: {
-        older: '更多'
+        older: '更多',
+        backHome: '回到陈列',
+        collaborator: '合作伙伴',
+        client: '客户'
       },
       about: {
         ourDimension: '我们的“维度”',

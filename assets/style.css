@@ -78,6 +78,7 @@ p {
   font-size: 14px;
   color: rgb(68, 68, 68);
   letter-spacing: 0.1em;
+  margin-block: 1em;
 }
 
 span {
@@ -118,6 +119,15 @@ hr {
   margin-top: 20px;
   border-top: 1px solid #eee;
   width: 100%;
+}
+
+/* text link */
+.text-link {
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
 }
 
 @media (prefers-color-scheme: dark) {
