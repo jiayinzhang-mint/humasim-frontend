@@ -1,7 +1,5 @@
 <template>
-  <v-app>
-    <h1>{{ $t(`links.collection`) }}</h1>
-  </v-app>
+  <v-app> </v-app>
 </template>
 
 <script lang="ts">

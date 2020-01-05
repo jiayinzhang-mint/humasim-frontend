@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="px-1">
     <h1>{{ $t(`links.about`) }}</h1>
     <h3 class="mt-10">{{ $t(`about.ourDimension`) }}</h3>
     <h3>FORM INSIDE FUNCTION</h3>

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="px-1">
     <h1>
       {{ $t(`links.timeline`) }}
     </h1>
