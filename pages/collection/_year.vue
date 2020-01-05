@@ -70,8 +70,8 @@
                 <h3 class="work-title mt-5">{{ item.title }}</h3>
                 <span>FOR {{ item.client }}</span>
                 <v-img
-                  src="https://picsum.photos/id/11/500/300"
-                  lazy-src="https://picsum.photos/id/11/10/6"
+                  v-if="item.titlePic !== ''"
+                  :src="item.titlePic"
                   class="grey lighten-2 mt-3"
                   max-height="312"
                 >

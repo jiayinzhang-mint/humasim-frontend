@@ -10,11 +10,13 @@
         >
           <v-container fluid class="pa-1">
             <h3>{{ item.title }}</h3>
-            <span>{{ item.createTime }}</span>
+            <span>{{ item.createdAt | formatDate('yyyy/MM/dd') }}</span>
             <p>{{ item.intro }}</p>
-            <!-- <nuxt-link style="font-size:14px">{{
-              $t('news.learnMore')
-            }}</nuxt-link> -->
+            <nuxt-link
+              :to="`${localePath('news')}/${item.id}`"
+              style="font-size:14px"
+              >{{ $t('news.learnMore') }}</nuxt-link
+            >
           </v-container>
         </v-card>
         <hr />

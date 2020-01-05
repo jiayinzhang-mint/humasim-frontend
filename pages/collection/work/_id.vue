@@ -12,6 +12,10 @@
     </h4>
     <p v-if="$i18n.locale === 'en'" v-html="work.descriptionEn"></p>
     <p v-else-if="$i18n.locale === 'cn'" v-html="work.description"></p>
+
+    <!-- <div v-for="(item, i) in work.pic" :key="`p-${i}`">
+      <v-img :src="`127.0.0.1:9088/image?path=${work.id}/${item}`"></v-img>
+    </div> -->
   </div>
 </template>
 
