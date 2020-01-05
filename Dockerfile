@@ -8,3 +8,5 @@ ADD . ${APP_ROOT}
 
 RUN npm install
 RUN npm run build
+
+EXPOSE 3000
