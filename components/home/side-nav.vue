@@ -35,12 +35,12 @@
     <v-list dense nav width="40" class="px-0">
       <v-list-item
         :class="locale === 'cn' ? `nav-active` : ``"
-        :to="switchLocalePath('cn')"
+        @click="switchLocale('cn')"
         ><v-list-item-title>CN</v-list-item-title></v-list-item
       >
       <v-list-item
         :class="locale === 'en' ? `nav-active` : ``"
-        :to="switchLocalePath('en')"
+        @click="switchLocale('en')"
         ><v-list-item-title>EN</v-list-item-title></v-list-item
       >
     </v-list>
@@ -48,33 +48,35 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 import { NuxtVueI18n } from 'nuxt-i18n';
 
 @Component
 export default class HomeSideNav extends Vue {
-  private navItems = [
-    {
-      path: 'news',
-      title: 'links.news'
-    },
-    {
-      path: 'collection',
-      title: 'links.collection'
-    },
-    {
-      path: 'timeline',
-      title: 'links.timeline'
-    },
-    {
-      path: 'about',
-      title: 'links.about'
-    },
-    {
-      path: 'contact',
-      title: 'links.contact'
-    }
-  ];
+  private get navItems() {
+    return [
+      {
+        path: 'news',
+        title: 'links.news'
+      },
+      {
+        path: 'collection',
+        title: 'links.collection'
+      },
+      {
+        path: 'timeline',
+        title: 'links.timeline'
+      },
+      {
+        path: 'about',
+        title: 'links.about'
+      },
+      {
+        path: 'contact',
+        title: 'links.contact'
+      }
+    ];
+  }
 
   private get yearList() {
     const thisYear = new Date().getFullYear();
@@ -88,9 +90,20 @@ export default class HomeSideNav extends Vue {
     ];
   }
 
+  private switchLocale(l: string) {
+    window.location.href = this.switchLocalePath(l);
+  }
+
   private get locale() {
     return this.$i18n.locale;
   }
+
+  // @Watch('locale')
+  // private onChanged() {
+  //   console.log(this.locale);
+  //   console.log(window.location);
+  //   console.log(this.switchLocalePath())
+  // }
 
   private mounted() {}
 }
