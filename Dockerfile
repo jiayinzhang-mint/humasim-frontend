@@ -8,6 +8,8 @@ RUN mkdir ${APP_ROOT}
 WORKDIR ${APP_ROOT}
 ADD . ${APP_ROOT}
 
+RUN npm config set registry https://registry.npm.taobao.org
+
 RUN npm install
 RUN npm run build
 
