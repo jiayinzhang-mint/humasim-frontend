@@ -70,7 +70,7 @@ export default {
     ],
     '@nuxtjs/axios'
   ],
-
+  devModules: ['@nuxtjs/eslint-module'],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
