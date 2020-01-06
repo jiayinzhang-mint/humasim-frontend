@@ -98,13 +98,6 @@ export default class HomeSideNav extends Vue {
     return this.$i18n.locale;
   }
 
-  // @Watch('locale')
-  // private onChanged() {
-  //   console.log(this.locale);
-  //   console.log(window.location);
-  //   console.log(this.switchLocalePath())
-  // }
-
   private mounted() {}
 }
 </script>

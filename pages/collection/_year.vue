@@ -8,7 +8,7 @@
         <transition appear appear-active-class="fade-left-enter">
           <h1
             v-if="year + 1 <= thisYear"
-            style="color:grey;user-select:none"
+            style="color:grey;user-select:none;cursor:pointer"
             @click="setYear(year + 1)"
           >
             {{ year + 1 }}
@@ -23,7 +23,7 @@
           <h1
             v-if="year - 1 >= 2014"
             class="ml-3"
-            style="color:grey;;user-select:none"
+            style="color:grey;;user-select:none;cursor:pointer"
             @click="setYear(year - 1)"
           >
             {{ year - 1 }}
