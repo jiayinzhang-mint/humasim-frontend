@@ -13,20 +13,22 @@
     <p v-if="$i18n.locale === 'en'" v-html="work.descriptionEn"></p>
     <p v-else-if="$i18n.locale === 'cn'" v-html="work.description"></p>
 
-    <div v-for="(item, i) in work.pic" :key="`p-${i}`">
-      <v-img
-        class="my-2"
-        :src="`https://static.insdim.com/image?path=${work.id}/${item}`"
-      >
-        <template v-slot:placeholder>
-          <v-row class="fill-height ma-0" align="center" justify="center">
-            <v-progress-circular
-              indeterminate
-              color="grey lighten-5"
-            ></v-progress-circular>
-          </v-row> </template
-      ></v-img>
-    </div>
+    <section>
+      <div v-for="(item, i) in work.pic" :key="`p-${i}`">
+        <v-img
+          class="my-2"
+          :src="`https://static.insdim.com/image?path=${work.id}/${item}`"
+        >
+          <template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img>
+      </div>
+    </section>
   </div>
 </template>
 

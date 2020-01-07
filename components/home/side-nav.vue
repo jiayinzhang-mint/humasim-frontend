@@ -34,12 +34,12 @@
 
     <v-list dense nav width="40" class="px-0">
       <v-list-item
-        :class="locale === 'cn' ? `nav-active` : ``"
+        :class="locale === 'cn' ? `nav-active v-list-item--active` : ``"
         @click="switchLocale('cn')"
         ><v-list-item-title>CN</v-list-item-title></v-list-item
       >
       <v-list-item
-        :class="locale === 'en' ? `nav-active` : ``"
+        :class="locale === 'en' ? `nav-active v-list-item--active` : ``"
         @click="switchLocale('en')"
         ><v-list-item-title>EN</v-list-item-title></v-list-item
       >
