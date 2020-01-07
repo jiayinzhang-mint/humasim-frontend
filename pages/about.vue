@@ -14,13 +14,13 @@
             <v-card flat color="transparent">
               <v-img src="/brand/humasim.jpg"></v-img>
             </v-card>
-            <h3 class="text-center ">HUMASIM</h3>
+            <h3 class="text-center mb-0">HUMASIM</h3>
           </v-col>
           <v-col cols="6" md="4">
             <v-card flat color="transparent">
               <v-img src="/brand/dimlab.jpg"></v-img>
             </v-card>
-            <h3 class="text-center ">DIMLAB</h3>
+            <h3 class="text-center mb-0">DIMLAB</h3>
           </v-col>
         </v-row>
       </v-container>
@@ -33,13 +33,13 @@
             <v-card flat color="transparent">
               <v-img src="/brand/wenext.jpg"></v-img>
             </v-card>
-            <h3 class="text-center ">WENEXT</h3>
+            <h3 class="text-center mb-0">WENEXT</h3>
           </v-col>
           <v-col cols="6" md="4">
             <v-card flat color="transparent">
               <v-img src="/brand/zcc.jpg"></v-img>
             </v-card>
-            <h3 class="text-center ">SCC TECH</h3>
+            <h3 class="text-center mb-0">SCC TECH</h3>
           </v-col>
         </v-row>
       </v-container>

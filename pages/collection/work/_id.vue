@@ -8,7 +8,7 @@
     <h2>{{ work.title }}</h2>
     <h4>{{ $t('collection.client') }} {{ work.client }}</h4>
     <h4 v-if="work.collaborator">
-      {{ $t('collection.collaborator') }} - {{ work.collaborator }}
+      {{ $t('collection.collaborator') }} {{ work.collaborator }}
     </h4>
     <p v-if="$i18n.locale === 'en'" v-html="work.descriptionEn"></p>
     <p v-else-if="$i18n.locale === 'cn'" v-html="work.description"></p>
