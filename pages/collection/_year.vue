@@ -59,45 +59,47 @@
     <transition appear appear-active-class="fade-left-enter">
       <section>
         <div v-for="(item, i) in workList" :key="`n-${i}`">
-          <v-hover v-slot:default="{ hover }">
-            <v-card
-              :to="`${localePath('collection')}/work/${item.id}`"
-              :class="{ 'on-hover': hover }"
-              flat
-              color="transparent"
-            >
-              <v-container fluid class="pa-1">
-                <h3 class="work-title mt-5">{{ item.title }}</h3>
-                <span>FOR {{ item.client }}</span>
-                <v-img
-                  v-if="item.titlePic !== ''"
-                  :src="item.titlePic"
-                  class="grey lighten-2 mt-3"
-                  max-height="312"
-                >
-                  <template v-slot:placeholder>
-                    <v-row
-                      class="fill-height ma-0"
-                      align="center"
-                      justify="center"
-                    >
-                      <v-progress-circular
-                        indeterminate
-                        color="grey lighten-5"
-                      ></v-progress-circular>
-                    </v-row>
-                  </template>
-                  <v-fade-transition>
-                    <div
-                      v-if="hover"
-                      class="d-flex transition-fast-in-fast-out black v-card--reveal display-3 white--text"
-                      style="height: 100%;"
-                    ></div>
-                  </v-fade-transition>
-                </v-img>
-              </v-container>
-            </v-card>
-          </v-hover>
+          <v-skeleton-loader :loading="loading" type="image">
+            <v-hover v-slot:default="{ hover }">
+              <v-card
+                :to="`${localePath('collection')}/work/${item.id}`"
+                :class="{ 'on-hover': hover }"
+                flat
+                color="transparent"
+              >
+                <v-container fluid class="pa-1">
+                  <h3 class="work-title mt-5">{{ item.title }}</h3>
+                  <span>FOR {{ item.client }}</span>
+                  <v-img
+                    v-if="item.titlePic !== ''"
+                    :src="item.titlePic"
+                    class="grey lighten-2 mt-3"
+                    max-height="312"
+                  >
+                    <template v-slot:placeholder>
+                      <v-row
+                        class="fill-height ma-0"
+                        align="center"
+                        justify="center"
+                      >
+                        <v-progress-circular
+                          indeterminate
+                          color="grey lighten-5"
+                        ></v-progress-circular>
+                      </v-row>
+                    </template>
+                    <v-fade-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out black v-card--reveal display-3 white--text"
+                        style="height: 100%;"
+                      ></div>
+                    </v-fade-transition>
+                  </v-img>
+                </v-container>
+              </v-card>
+            </v-hover>
+          </v-skeleton-loader>
           <hr />
         </div>
       </section>
