@@ -1,7 +1,7 @@
 <template>
   <div>
     <nuxt-link :to="localePath('news')">
-      <h4 class="font-weight-black">{{ $t('news.backHome') }}</h4>
+      <h4 class="text-link font-weight-black">{{ $t('news.backHome') }}</h4>
     </nuxt-link>
     <h2>{{ newsInfo.title }}</h2>
     <p v-if="$i18n.locale === 'en'" v-html="newsInfo.contentEn"></p>
