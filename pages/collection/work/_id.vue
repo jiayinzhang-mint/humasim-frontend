@@ -6,7 +6,7 @@
       </h4>
     </nuxt-link>
     <h2>{{ work.title }}</h2>
-    <h4>{{ $t('collection.client') }} - {{ work.client }}</h4>
+    <h4>{{ $t('collection.client') }} {{ work.client }}</h4>
     <h4 v-if="work.collaborator">
       {{ $t('collection.collaborator') }} - {{ work.collaborator }}
     </h4>

@@ -18,8 +18,8 @@ export default (context) => {
       collection: {
         older: '更多',
         backHome: '回到陈列',
-        collaborator: '合作伙伴',
-        client: '客户'
+        collaborator: '合作伙伴:',
+        client: '客户:'
       },
       about: {
         ourDimension: '我们的“维度”',
