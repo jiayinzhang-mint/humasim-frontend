@@ -3,22 +3,24 @@
     <h1 class="px-1">{{ $t(`links.news`) }}</h1>
     <section>
       <div v-for="(item, i) in newsList" :key="`n-${i}`">
-        <v-card
-          :to="`${localePath('news')}/${item.id}`"
-          flat
-          color="transparent"
-        >
-          <v-container fluid class="pa-1">
-            <h3>{{ item.title }}</h3>
-            <span>{{ item.createdAt | formatDate('yyyy/MM/dd') }}</span>
-            <p>{{ item.intro }}</p>
-            <nuxt-link
-              :to="`${localePath('news')}/${item.id}`"
-              style="font-size:14px"
-              >{{ $t('news.learnMore') }}</nuxt-link
-            >
-          </v-container>
-        </v-card>
+        <v-skeleton-loader :loading="loading" type="image">
+          <v-card
+            :to="`${localePath('news')}/${item.id}`"
+            flat
+            color="transparent"
+          >
+            <v-container fluid class="pa-1">
+              <h3>{{ item.title }}</h3>
+              <span>{{ item.createdAt | formatDate('yyyy/MM/dd') }}</span>
+              <p>{{ item.intro }}</p>
+              <nuxt-link
+                :to="`${localePath('news')}/${item.id}`"
+                style="font-size:14px"
+                >{{ $t('news.learnMore') }}</nuxt-link
+              >
+            </v-container>
+          </v-card>
+        </v-skeleton-loader>
         <hr />
       </div>
     </section>
@@ -33,10 +35,13 @@ import NewsService from '@/service/newsService';
 @Component
 export default class NewsIndex extends Vue {
   private newsList: News[] = [];
+  private loading = false;
 
   private async getNewList() {
     try {
+      this.loading = true;
       this.newsList = await NewsService.getNewsList();
+      this.loading = false;
     } catch (_) {}
   }
 
