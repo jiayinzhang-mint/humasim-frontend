@@ -12,13 +12,37 @@
         <v-row dense>
           <v-col cols="6" md="4">
             <v-card flat color="transparent">
-              <v-img src="/brand/humasim.jpg"></v-img>
+              <v-img src="/brand/humasim.jpg">
+                <template v-slot:placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
+                  </v-row> </template
+              ></v-img>
             </v-card>
             <h3 class="text-center mb-0">HUMASIM</h3>
           </v-col>
           <v-col cols="6" md="4">
             <v-card flat color="transparent">
-              <v-img src="/brand/dimlab.jpg"></v-img>
+              <v-img src="/brand/dimlab.jpg">
+                <template v-slot:placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
+                  </v-row> </template
+              ></v-img>
             </v-card>
             <h3 class="text-center mb-0">DIMLAB</h3>
           </v-col>
@@ -31,13 +55,37 @@
         <v-row dense>
           <v-col cols="6" md="4">
             <v-card flat color="transparent">
-              <v-img src="/brand/wenext.jpg"></v-img>
+              <v-img src="/brand/wenext.jpg">
+                <template v-slot:placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
+                  </v-row> </template
+              ></v-img>
             </v-card>
             <h3 class="text-center mb-0">WENEXT</h3>
           </v-col>
           <v-col cols="6" md="4">
             <v-card flat color="transparent">
-              <v-img src="/brand/zcc.jpg"></v-img>
+              <v-img src="/brand/zcc.jpg">
+                <template v-slot:placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
+                  </v-row> </template
+              ></v-img>
             </v-card>
             <h3 class="text-center mb-0">SCC TECH</h3>
           </v-col>

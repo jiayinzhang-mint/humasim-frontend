@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <v-navigation-drawer
-      v-model="nav"
       mobile-break-point="600"
       app
       :color="$vuetify.theme.dark ? `rgb(36, 36, 36)` : 'white'"
@@ -38,7 +37,7 @@ import Footer from '@/components/home/footer.vue';
   components: { SideNav, Footer }
 })
 export default class Default extends Vue {
-  private nav: boolean = true;
+  private nav: boolean = false;
 
   private detectTheme() {
     if (matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -59,6 +58,10 @@ export default class Default extends Vue {
   private mounted() {
     this.detectTheme();
     this.$vuetify.icons.iconfont = 'mdi';
+
+    if (document.body.clientWidth <= 600) {
+      this.nav = false;
+    }
   }
 }
 </script>
