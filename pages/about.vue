@@ -1,7 +1,7 @@
 <template>
   <v-app class="px-1">
     <h1>{{ $t(`links.about`) }}</h1>
-    <h3 class="mt-10">{{ $t(`about.ourDimension`) }}</h3>
+    <h3 class="mt-10">{{ $t(`about.ourDimension`) }}:</h3>
     <h3>FORM INSIDE FUNCTION</h3>
     <h3>() => NEW FORMDATA()</h3>
     <h4 class="grey--text">{{ $t(`about.serviceContent`) }}</h4>

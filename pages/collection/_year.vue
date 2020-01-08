@@ -72,7 +72,9 @@
                   <span>FOR {{ item.client }}</span>
                   <v-img
                     v-if="item.titlePic !== ''"
-                    :src="item.titlePic"
+                    :src="
+                      `https://static.insdim.com/image?path=${item.id}/${item.titlePic}`
+                    "
                     class="grey lighten-2 mt-3"
                     max-height="312"
                   >

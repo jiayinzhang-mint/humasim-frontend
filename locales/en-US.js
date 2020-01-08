@@ -23,7 +23,7 @@ export default (context) => {
       },
       about: {
         ourDimension: 'our dimension',
-        serviceContent: 'spacial // product // graphic // development',
+        serviceContent: 'spatial // product // graphic // development',
         subsidiaries: 'subsidiaries',
         partners: 'partners'
       },
