@@ -82,12 +82,18 @@ export default {
   proxy: {
     '/api/': 'http://127.0.0.1:9090'
   },
+
   pwa: {
     meta: {
       name: 'INSDIM',
-      author: 'INSDIM'
+      mobileApp: true,
+      mobileAppIOS: true
+    },
+    manifest: {
+      name: 'INSDIM'
     }
   },
+
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
