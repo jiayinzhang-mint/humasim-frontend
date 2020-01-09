@@ -60,8 +60,8 @@ export default class Default extends Vue {
     this.detectTheme();
     this.$vuetify.icons.iconfont = 'mdi';
 
-    if (document.body.clientWidth <= 600) {
-      this.nav = false;
+    if (document.body.clientWidth >= 600) {
+      this.nav = true;
     }
   }
 }

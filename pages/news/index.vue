@@ -10,14 +10,15 @@
             color="transparent"
           >
             <v-container fluid class="pa-1">
-              <h3>{{ item.title }}</h3>
+              <h3 class="work-title">{{ item.title }}</h3>
               <span>{{ item.createdAt | formatDate('yyyy/MM/dd') }}</span>
-              <p>{{ item.intro }}</p>
-              <nuxt-link
+              <br />
+              <span>{{ item.intro }}</span>
+              <!-- <nuxt-link
                 :to="`${localePath('news')}/${item.id}`"
                 style="font-size:14px"
                 >{{ $t('news.learnMore') }}</nuxt-link
-              >
+              > -->
             </v-container>
           </v-card>
         </v-skeleton-loader>
