@@ -67,8 +67,7 @@ export default {
         lazy: true,
         langDir: 'locales/'
       }
-    ],
-    '@nuxtjs/axios'
+    ]
   ],
   /*
    ** Axios module configuration
@@ -117,6 +116,7 @@ export default {
   build: {
     cache: true,
     parallel: true,
+    hardSource: true,
     /*
      ** You can extend webpack config here
      */

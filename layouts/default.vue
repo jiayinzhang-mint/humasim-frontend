@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer
+      v-model="nav"
       mobile-break-point="600"
       app
       :color="$vuetify.theme.dark ? `rgb(36, 36, 36)` : 'white'"
