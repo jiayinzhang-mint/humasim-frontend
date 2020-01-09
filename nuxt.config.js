@@ -17,7 +17,10 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/INSDIM.svg' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' }
+    ]
   },
   /*
    ** Customize the progress-bar color
