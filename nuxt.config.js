@@ -86,6 +86,10 @@ export default {
     meta: {
       name: 'INSDIM',
       author: 'INSDIM'
+    },
+    manifest: {
+      name: 'INSDIM',
+      shortname: 'INSDIM'
     }
   },
   /*
