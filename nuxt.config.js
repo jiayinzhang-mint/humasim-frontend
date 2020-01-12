@@ -86,11 +86,11 @@ export default {
   pwa: {
     meta: {
       name: 'INSDIM',
-      mobileApp: true,
-      mobileAppIOS: true
+      author: 'INSDIM'
     },
     manifest: {
-      name: 'INSDIM'
+      name: 'INSDIM',
+      shortname: 'INSDIM'
     }
   },
 
