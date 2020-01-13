@@ -62,6 +62,7 @@
           <v-skeleton-loader :loading="loading" type="image">
             <v-hover v-slot:default="{ hover }">
               <v-card
+                tile
                 :to="`${localePath('collection')}/work/${item.id}`"
                 :class="{ 'on-hover': hover }"
                 flat
@@ -86,7 +87,7 @@
                       >
                         <v-progress-circular
                           indeterminate
-                          color="grey lighten-5"
+                          color="grey lighten-2"
                         ></v-progress-circular>
                       </v-row>
                     </template>
@@ -117,7 +118,7 @@ import WorkService from '@/service/workService';
 @Component
 export default class CollectionSingle extends Vue {
   private workList: Work[] = [];
-  private loading: boolean = false;
+  private loading: boolean = true;
 
   private async getWorkList() {
     this.loading = true;

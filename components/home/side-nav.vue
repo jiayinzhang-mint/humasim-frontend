@@ -3,10 +3,11 @@
     <v-img class="mb-12 mt-3" width="120" height="120" src="/icon.png"></v-img>
 
     <v-layout>
-      <v-list dense nav width="120" class="px-0">
+      <v-list dense width="120" class="px-0">
         <v-list-item
           v-for="(item, i) in navItems"
           :key="`n-${i}`"
+          class="px-2"
           active-class="nav-active"
           :to="localePath(item.path)"
         >
@@ -32,14 +33,18 @@
       </v-list> -->
     </v-layout>
 
-    <v-list dense nav width="40" class="px-0">
+    <v-list dense width="60" class="px-0">
       <v-list-item
-        :class="locale === 'cn' ? `nav-active v-list-item--active` : ``"
+        :class="
+          `${locale === 'cn' ? `nav-active v-list-item--active` : ``} px-2`
+        "
         @click="switchLocale('cn')"
         ><v-list-item-title>CN</v-list-item-title></v-list-item
       >
       <v-list-item
-        :class="locale === 'en' ? `nav-active v-list-item--active` : ``"
+        :class="
+          `${locale === 'en' ? `nav-active v-list-item--active` : ``} px-2`
+        "
         @click="switchLocale('en')"
         ><v-list-item-title>EN</v-list-item-title></v-list-item
       >

@@ -5,6 +5,7 @@
       <div v-for="(item, i) in newsList" :key="`n-${i}`">
         <v-skeleton-loader :loading="loading" type="image">
           <v-card
+            tile
             :to="`${localePath('news')}/${item.id}`"
             flat
             color="transparent"
@@ -36,7 +37,7 @@ import NewsService from '@/service/newsService';
 @Component
 export default class NewsIndex extends Vue {
   private newsList: News[] = [];
-  private loading = false;
+  private loading = true;
 
   private async getNewList() {
     try {
