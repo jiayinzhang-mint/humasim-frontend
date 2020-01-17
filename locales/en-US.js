@@ -46,6 +46,11 @@ export default (context) => {
         application: 'application',
         cv: 'c.v.',
         portfolio: 'portfolio'
+      },
+      timeline: {
+        chiefDesigner: 'chief designer - LIN',
+        awards: 'awards',
+        exhibition: 'exhibition'
       }
     });
   });

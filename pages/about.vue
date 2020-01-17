@@ -23,8 +23,9 @@
                       indeterminate
                       color="grey lighten-5"
                     ></v-progress-circular>
-                  </v-row> </template
-              ></v-img>
+                  </v-row>
+                </template>
+              </v-img>
             </v-card>
             <h3 class="text-center mb-0">HUMASIM</h3>
           </v-col>
@@ -41,8 +42,9 @@
                       indeterminate
                       color="grey lighten-5"
                     ></v-progress-circular>
-                  </v-row> </template
-              ></v-img>
+                  </v-row>
+                </template>
+              </v-img>
             </v-card>
             <h3 class="text-center mb-0">DIMLAB</h3>
           </v-col>
@@ -66,8 +68,9 @@
                       indeterminate
                       color="grey lighten-5"
                     ></v-progress-circular>
-                  </v-row> </template
-              ></v-img>
+                  </v-row>
+                </template>
+              </v-img>
             </v-card>
             <h3 class="text-center mb-0">WENEXT</h3>
           </v-col>
@@ -84,8 +87,9 @@
                       indeterminate
                       color="grey lighten-5"
                     ></v-progress-circular>
-                  </v-row> </template
-              ></v-img>
+                  </v-row>
+                </template>
+              </v-img>
             </v-card>
             <h3 class="text-center mb-0">SCC TECH</h3>
           </v-col>

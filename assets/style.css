@@ -130,6 +130,20 @@ hr {
   text-decoration: underline;
 }
 
+.timeline-wrapper {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.timeline-item {
+  text-align: left;
+}
+
+.timeline-item p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
 @media (prefers-color-scheme: dark) {
   #app {
     background: rgb(36, 36, 36);

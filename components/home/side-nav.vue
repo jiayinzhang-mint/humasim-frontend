@@ -68,10 +68,10 @@ export default class HomeSideNav extends Vue {
         path: 'collection',
         title: 'links.collection'
       },
-      // {
-      //   path: 'timeline',
-      //   title: 'links.timeline'
-      // },
+      {
+        path: 'timeline',
+        title: 'links.timeline'
+      },
       {
         path: 'about',
         title: 'links.about'

@@ -45,6 +45,11 @@ export default (context) => {
         application: '申请职位',
         cv: '个人简历',
         portfolio: '作品集'
+      },
+      timeline: {
+        chiefDesigner: '设计代表 - 林舒安',
+        awards: '奖项',
+        exhibition: '展览'
       }
     });
   });
