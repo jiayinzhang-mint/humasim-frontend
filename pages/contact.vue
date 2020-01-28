@@ -7,7 +7,7 @@
     <li>{{ $t(`contact.address`) }}</li>
     <p>{{ $t(`contact.addressDetail`) }}</p>
     <li>E-MAIL</li>
-    <p>mint@insdim.com</p>
+    <p>contact@insdim.com</p>
 
     <h3 class="mt-10">{{ $t(`contact.joinUs`) }}</h3>
     <li>{{ $t(`contact.architect`) }}</li>

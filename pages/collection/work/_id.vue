@@ -1,7 +1,10 @@
 <template>
   <div>
-    <nuxt-link :to="`${localePath('collection')}/${work.year}`">
-      <h4 class="text-link font-weight-black">
+    <nuxt-link
+      class="text-link"
+      :to="`${localePath('collection')}/${work.year}`"
+    >
+      <h4 class="font-weight-black">
         {{ $t('collection.backHome') }}
       </h4>
     </nuxt-link>
@@ -25,8 +28,9 @@
                 indeterminate
                 color="grey lighten-2"
               ></v-progress-circular>
-            </v-row> </template
-        ></v-img>
+            </v-row>
+          </template>
+        </v-img>
       </div>
     </section>
   </div>
