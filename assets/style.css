@@ -116,7 +116,8 @@ section {
 hr {
   border: 0;
   background-color: #000;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-top: 1px solid #eee;
   width: 100%;
 }
@@ -150,14 +151,14 @@ hr {
     color: #fff;
   }
   p {
-    color: rgb(179, 179, 179);
+    color: rgb(255, 255, 255);
     letter-spacing: 0.1em;
   }
   a {
     color: #fff !important;
   }
   span {
-    color: rgb(179, 179, 179);
+    color: rgb(247, 247, 247);
   }
   hr {
     border-top: 1px solid #313131;
