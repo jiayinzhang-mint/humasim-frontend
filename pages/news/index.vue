@@ -11,10 +11,14 @@
             color="transparent"
           >
             <v-container fluid class="pa-1">
-              <h3 class="work-title">{{ item.title }}</h3>
+              <h3 v-if="locale === `en`" class="work-title">
+                {{ item.titleEn }}
+              </h3>
+              <h3 v-else class="work-title">{{ item.title }}</h3>
               <span>{{ item.createdAt | formatDate('yyyy/MM/dd') }}</span>
               <br />
-              <span>{{ item.intro }}</span>
+              <span v-if="locale === `en`">{{ item.introEn }}</span>
+              <span v-else>{{ item.intro }}</span>
               <!-- <nuxt-link
                 :to="`${localePath('news')}/${item.id}`"
                 style="font-size:14px"
@@ -45,6 +49,10 @@ export default class NewsIndex extends Vue {
       this.newsList = await NewsService.getNewsList();
       this.loading = false;
     } catch (_) {}
+  }
+
+  private get locale() {
+    return this.$i18n.locale;
   }
 
   private mounted() {

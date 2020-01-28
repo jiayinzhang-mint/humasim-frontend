@@ -1,6 +1,7 @@
 class News {
   id!: string;
   title!: string;
+  titleEn!: string;
   createdAt!: string;
   visibility!: boolean;
   author!: string;
