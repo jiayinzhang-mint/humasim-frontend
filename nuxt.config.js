@@ -14,12 +14,13 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'INSDIM official site'
       }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' }
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' },
+      { rel: 'apple-touch-icon', type: 'image/x-icon', href: '/icon.png' }
     ]
   },
   /*
