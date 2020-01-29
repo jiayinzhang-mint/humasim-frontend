@@ -6,15 +6,15 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - A DESIGN COMPANY',
-    title: 'INSDIM',
+    titleTemplate: '%s',
+    title: 'HUMASIM',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'INSDIM official site'
+        content: 'HUMASIM official site'
       }
     ],
     link: [
@@ -86,12 +86,12 @@ export default {
 
   pwa: {
     meta: {
-      name: 'INSDIM',
-      author: 'INSDIM'
+      name: 'HUMASIM',
+      author: 'HUMASIM'
     },
     manifest: {
-      name: 'INSDIM',
-      shortname: 'INSDIM'
+      name: 'HUMASIM',
+      shortname: 'HUMASIM'
     }
   },
 
