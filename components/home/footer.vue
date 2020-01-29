@@ -1,7 +1,7 @@
 <template>
-  <v-container class="mb-10" style="margin-top:100px">
-    <h3 class="text-center">COPYRIGHT © {{ thisYear }} INSDIM&trade;</h3>
-    <h4 class="text-center">FORM INSIDE FUNCTION</h4>
+  <v-container id="footer" class="mb-10" style="margin-top:100px">
+    <h3 class="text-center">COPYRIGHT © {{ thisYear }} HUMASIM&trade;</h3>
+    <!-- <h4 class="text-center">FORM INSIDE FUNCTION</h4> -->
     <h5 class="text-center">
       <a href="http://www.beian.miit.gov.cn" target="_blank">
         沪ICP备16025975号-1</a

@@ -54,6 +54,15 @@ p {
   margin-block-end: 1em;
 }
 
+.head-icon {
+  z-index: 9;
+  position: absolute !important;
+  border-radius: 60px !important;
+  left: 50%;
+  transform: translate(-50%, 0) !important;
+  cursor: pointer;
+}
+
 .nav-active {
   background-color: #141414 !important;
   color: white !important;

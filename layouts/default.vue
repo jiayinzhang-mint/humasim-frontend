@@ -1,23 +1,51 @@
 <template>
   <v-app>
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       v-model="nav"
       mobile-break-point="600"
       app
       :color="$vuetify.theme.dark ? `rgb(36, 36, 36)` : 'white'"
     >
       <SideNav></SideNav>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
 
-    <v-content>
-      <v-toolbar class="d-flex d-sm-none" height="100" flat color="transparent">
-        <v-btn large icon @click="nav = !nav">
-          <v-icon>mdi-menu</v-icon>
-        </v-btn>
-      </v-toolbar>
-      <v-toolbar class="d-none d-sm-flex" dense flat color="transparent">
-      </v-toolbar>
-      <v-container>
+    <v-app-bar
+      elevate-on-scroll
+      absolute
+      app
+      class="transparent"
+      scroll-target="#content"
+    >
+      <v-hover v-slot:default="{ hover }">
+        <v-card
+          :elevation="hover ? 6 : 2"
+          light
+          class="head-icon"
+          @click.native="iconTrick"
+        >
+          <v-img max-height="48" max-width="48" src="/HUMASIM_ICON.svg"></v-img>
+        </v-card>
+      </v-hover>
+
+      <div v-for="(item, i) in navList" :key="`n-${i}`">
+        <v-btn text :to="item.route">{{ item.text }}</v-btn>
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon>
+        <v-avatar size="35">
+          <v-icon color="primary" size="20">mdi-account-outline</v-icon>
+        </v-avatar>
+      </v-btn>
+    </v-app-bar>
+
+    <v-content
+      id="content"
+      class="overflow-y-auto"
+      style="height:calc(100vh - 64px)"
+    >
+      <v-container style="height:2000px">
         <v-layout justify-center>
           <v-flex xs12 sm9> <nuxt /> </v-flex>
         </v-layout>
@@ -39,6 +67,29 @@ import Footer from '@/components/home/footer.vue';
 })
 export default class Default extends Vue {
   private nav: boolean = false;
+
+  private navList = [
+    {
+      text: '主页',
+      route: '/'
+    },
+    {
+      text: '产品',
+      route: 'product'
+    },
+    {
+      text: '关于',
+      route: 'about'
+    },
+    {
+      text: '联系',
+      route: 'contact'
+    }
+  ];
+
+  private iconTrick() {
+    console.log('chie');
+  }
 
   private detectTheme() {
     if (matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -63,12 +114,20 @@ export default class Default extends Vue {
     if (document.body.clientWidth >= 600) {
       this.nav = true;
     }
+
+    if (process.browser) {
+      window.localStorage.setItem('process', 'browser');
+    }
   }
 }
 </script>
 
-<style>
+<style scoped>
 .v-navigation-drawer__border {
   background-color: transparent !important;
+}
+
+.v-ripple__container {
+  border-radius: 60px !important;
 }
 </style>
