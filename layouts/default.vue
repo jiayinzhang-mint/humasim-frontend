@@ -1,19 +1,10 @@
 <template>
   <v-app>
-    <!-- <v-navigation-drawer
-      v-model="nav"
-      mobile-break-point="600"
-      app
-      :color="$vuetify.theme.dark ? `rgb(36, 36, 36)` : 'white'"
-    >
-      <SideNav></SideNav>
-    </v-navigation-drawer> -->
-
     <v-app-bar
+      :color="$vuetify.theme.dark ? `#242424` : `white`"
       elevate-on-scroll
       absolute
       app
-      class="transparent"
       scroll-target="#content"
     >
       <v-hover v-slot:default="{ hover }">
@@ -27,7 +18,11 @@
         </v-card>
       </v-hover>
 
-      <div v-for="(item, i) in navList" :key="`n-${i}`">
+      <div
+        v-for="(item, i) in navList"
+        :key="`n-${i}`"
+        class="hidden-sm-and-down"
+      >
         <v-btn text :to="item.route">{{ item.text }}</v-btn>
       </div>
 
@@ -47,7 +42,7 @@
     >
       <v-container style="height:2000px">
         <v-layout justify-center>
-          <v-flex xs12 sm9> <nuxt /> </v-flex>
+          <v-flex xs12 sm10> <nuxt /> </v-flex>
         </v-layout>
       </v-container>
       <Footer></Footer>
@@ -59,11 +54,10 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import '@/assets/style.css';
 
-import SideNav from '@/components/home/side-nav.vue';
 import Footer from '@/components/home/footer.vue';
 
 @Component({
-  components: { SideNav, Footer }
+  components: { Footer }
 })
 export default class Default extends Vue {
   private nav: boolean = false;

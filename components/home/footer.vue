@@ -1,6 +1,6 @@
 <template>
-  <v-container id="footer" class="mb-10" style="margin-top:100px">
-    <h3 class="text-center">COPYRIGHT © {{ thisYear }} HUMASIM&trade;</h3>
+  <v-container class="mb-10" style="margin-top:100px">
+    <h4 class="text-center">COPYRIGHT © {{ thisYear }} HUMASIM&reg;</h4>
     <!-- <h4 class="text-center">FORM INSIDE FUNCTION</h4> -->
     <h5 class="text-center">
       <a href="http://www.beian.miit.gov.cn" target="_blank">

@@ -4,12 +4,6 @@
 $body-font-family: 'Dosis';
 
 @import '~vuetify/src/styles/styles.sass';
-$material-light: map-deep-merge(
-  $material-light,
-  (
-    'background': #fff
-  )
-);
 $material-dark: map-deep-merge(
   $material-dark,
   (

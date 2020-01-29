@@ -1,8 +1,6 @@
-@import url('https://fonts.loli.net/css?family=Dosis|Open+Sans');
 @import url('https://cdn.staticfile.org/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.min.css');
 
 body {
-  font-family: 'Dosis', 'Open Sans';
   text-transform: uppercase;
 }
 
@@ -55,7 +53,7 @@ p {
 }
 
 .head-icon {
-  z-index: 9;
+  z-index: 99;
   position: absolute !important;
   border-radius: 60px !important;
   left: 50%;
@@ -121,6 +119,7 @@ section {
 .work-title {
   margin-block-start: 0.2em;
   margin-block-end: 0.2em;
+  font-weight: 600;
 }
 
 hr {
