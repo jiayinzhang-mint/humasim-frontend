@@ -84,6 +84,7 @@ p {
 span {
   letter-spacing: 0.1em;
   font-size: 12px;
+  line-height: 2.3;
   color: rgb(48, 48, 48);
 }
 
