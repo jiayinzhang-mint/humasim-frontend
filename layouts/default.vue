@@ -18,13 +18,14 @@
         </v-card>
       </v-hover>
 
-      <div
+      <v-btn
         v-for="(item, i) in navList"
         :key="`n-${i}`"
         class="hidden-sm-and-down"
+        text
+        :to="localePath(item.route)"
+        >{{ item.text }}</v-btn
       >
-        <v-btn text :to="item.route">{{ item.text }}</v-btn>
-      </div>
 
       <v-spacer></v-spacer>
 
@@ -40,11 +41,7 @@
       class="overflow-y-auto"
       style="height:calc(100vh - 64px)"
     >
-      <v-container style="height:2000px">
-        <v-layout justify-center>
-          <v-flex xs12 sm10> <nuxt /> </v-flex>
-        </v-layout>
-      </v-container>
+      <nuxt />
       <Footer></Footer>
     </v-content>
   </v-app>
@@ -69,15 +66,15 @@ export default class Default extends Vue {
     },
     {
       text: '产品',
-      route: 'product'
+      route: '/product'
     },
     {
       text: '关于',
-      route: 'about'
+      route: '/about'
     },
     {
       text: '联系',
-      route: 'contact'
+      route: '/contact'
     }
   ];
 

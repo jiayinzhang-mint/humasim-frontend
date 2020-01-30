@@ -1,5 +1,5 @@
 <template>
-  <v-app class="px-1">
+  <v-container class="px-1">
     <h1>
       {{ $t(`links.contact`) }}
     </h1>
@@ -47,7 +47,7 @@
     <p>join@insdim.com</p>
     <li>{{ $t(`contact.cv`) }}</li>
     <li>{{ $t(`contact.portfolio`) }}</li>
-  </v-app>
+  </v-container>
 </template>
 
 <script lang="ts">
