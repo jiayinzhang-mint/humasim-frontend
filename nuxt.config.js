@@ -43,7 +43,15 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
-    '@nuxt/typescript-build'
+    [
+      '@nuxt/typescript-build',
+      {
+        typeCheck: {
+          memoryLimit: 4096,
+          workers: 4
+        }
+      }
+    ]
   ],
   /*
    ** Nuxt.js modules

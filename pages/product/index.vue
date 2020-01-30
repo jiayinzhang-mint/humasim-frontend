@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <v-row dense>
-      <v-col cols="3">
-        <v-card flat color="transparent" class="mt-5">
+      <v-col cols="3" class="hidden-sm-and-down">
+        <v-card style="position:fixed" flat color="transparent" class="mt-5">
           <div class="headline font-weight-black">筛选</div>
 
           <v-text-field
@@ -13,7 +13,7 @@
             label="关键词"
           ></v-text-field>
 
-          <v-list dense class="mt-4">
+          <v-list color="transparent" dense class="mt-4">
             <v-list-item class="px-0">
               <v-list-item-title>- 🕹</v-list-item-title>
             </v-list-item>
@@ -31,14 +31,47 @@
           <v-btn block color="primary" class="mt-4">更新条件</v-btn>
         </v-card>
       </v-col>
-      <v-col cols="9"> </v-col>
+
+      <v-col md="8" sm="12">
+        <v-row dense>
+          <v-col
+            v-for="(item, i) in productList"
+            :key="`p-${i}`"
+            cols="6"
+            sm="6"
+            md="4"
+          >
+            <v-card>
+              <v-responsive aspect-ratio="1">
+                <v-card height="100%" color="primary"> </v-card>
+              </v-responsive>
+
+              <v-card-title class="caption font-weight-black">
+                {{ item.title }}
+              </v-card-title>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-col>
     </v-row>
   </v-app>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Product } from '@/types/product';
+import ProductService from '@/service/productService';
 
 @Component
-export default class WorkIndex extends Vue {}
+export default class WorkIndex extends Vue {
+  productList: Product[] = [];
+
+  async getProductList() {
+    this.productList = await ProductService.getProductList(new Product(), 1, 9);
+  }
+
+  mounted() {
+    this.getProductList();
+  }
+}
 </script>

@@ -1,4 +1,4 @@
-class Work {
+class Product {
   id!: string;
   title!: string;
   createdAt!: string;
@@ -12,4 +12,4 @@ class Work {
   titlePic?: string;
 }
 
-export { Work };
+export { Product };

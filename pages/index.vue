@@ -75,6 +75,10 @@ export default class Index extends Vue {
 
   private slides = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
 
+  private get locale() {
+    return this.$i18n.locale;
+  }
+
   private mounted() {
     // this.$router.push(this.localePath('news'));
   }
