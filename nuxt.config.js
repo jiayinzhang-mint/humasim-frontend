@@ -50,10 +50,10 @@ export default {
     [
       '@nuxt/typescript-build',
       {
-        typeCheck: {
-          memoryLimit: 4096,
-          workers: 4
-        }
+        // typeCheck: {
+        //   memoryLimit: 4096,
+        //   workers: 4
+        // }
       }
     ]
   ],
