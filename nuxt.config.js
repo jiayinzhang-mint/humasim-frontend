@@ -21,11 +21,7 @@ export default {
         content: 'HUMASIM official site'
       }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/icon.png' },
-      { rel: 'apple-touch-icon', type: 'image/x-icon', href: '/icon.png' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
    ** Customize the progress-bar color
@@ -94,17 +90,6 @@ export default {
   },
   proxy: {
     '/api/': 'http://127.0.0.1:9090'
-  },
-
-  pwa: {
-    meta: {
-      name: 'HUMASIM',
-      author: 'HUMASIM'
-    },
-    manifest: {
-      name: 'HUMASIM',
-      shortname: 'HUMASIM'
-    }
   },
 
   /*
