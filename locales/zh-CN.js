@@ -29,7 +29,7 @@ export default (context) => {
       },
       contact: {
         address: '地址',
-        addressDetail: '中国上海市 静安区 沪太支路1895弄 12号 201室',
+        addressDetail: '中国上海市 静安区 沪太支路1895弄 18号 2A室',
         service: '客户服务',
         joinUs: '加入我们',
         contactUs: '通讯方式',

@@ -1,102 +1,41 @@
 <template>
-  <v-container class="px-1">
-    <h1>{{ $t(`links.about`) }}</h1>
-    <h3 class="mt-10">{{ $t(`about.ourDimension`) }}:</h3>
-    <h3>FORM INSIDE FUNCTION</h3>
-    <h3>() => NEW FORMDATA()</h3>
-    <h4 class="grey--text">{{ $t(`about.serviceContent`) }}</h4>
+  <section>
+    <v-container>
+      <h1>{{ $t(`links.about`) }} HUMASIM</h1>
+      <p>
+        HUMASIM（河马森林）是由设计公司INSDIM创立的自营品牌。
+      </p>
+      <p>
+        我们旨在搜寻鲜活的创意，将他们做成产品，传递到更多人的生活中。
+      </p>
 
-    <section>
-      <h3 class="news-title">{{ $t(`about.subsidiaries`) }}</h3>
-      <v-container class="px-0">
-        <v-row dense>
-          <v-col cols="6" md="4">
-            <v-card tile flat color="transparent">
-              <v-img src="/brand/humasim.jpg">
-                <template v-slot:placeholder>
-                  <v-row
-                    class="fill-height ma-0"
-                    align="center"
-                    justify="center"
-                  >
-                    <v-progress-circular
-                      indeterminate
-                      color="grey lighten-5"
-                    ></v-progress-circular>
-                  </v-row>
-                </template>
-              </v-img>
+      <p>
+        这些创意也许来自不经意间的巧思，或是生活中某个不起眼的角落。
+      </p>
+
+      <p>
+        我们希望通过这种传递，使更多人体会到 “生活，本来就很有趣。”
+      </p>
+
+      <section>
+        <h1>设计师</h1>
+        <v-row no-gutters>
+          <v-col cols="3">
+            <v-card outlined flat>
+              <v-img></v-img>
+              <v-card-title class="subtitle-1 font-weight-black pb-0">
+                顾睿杰
+              </v-card-title>
+              <v-card-text class="caption">
+                <p>HUMASIM 创始人</p>
+                <p>INSDIM 设计师</p>
+              </v-card-text>
             </v-card>
-            <h3 class="text-center mb-0">HUMASIM</h3>
-          </v-col>
-          <v-col cols="6" md="4">
-            <v-card tile flat color="transparent">
-              <v-img src="/brand/dimlab.jpg">
-                <template v-slot:placeholder>
-                  <v-row
-                    class="fill-height ma-0"
-                    align="center"
-                    justify="center"
-                  >
-                    <v-progress-circular
-                      indeterminate
-                      color="grey lighten-5"
-                    ></v-progress-circular>
-                  </v-row>
-                </template>
-              </v-img>
-            </v-card>
-            <h3 class="text-center mb-0">DIMLAB</h3>
           </v-col>
         </v-row>
-      </v-container>
-    </section>
-    <section>
-      <h3 class="news-title">{{ $t(`about.partners`) }}</h3>
-      <v-container class="px-0">
-        <v-row dense>
-          <v-col cols="6" md="4">
-            <v-card tile flat color="transparent">
-              <v-img src="/brand/wenext.jpg">
-                <template v-slot:placeholder>
-                  <v-row
-                    class="fill-height ma-0"
-                    align="center"
-                    justify="center"
-                  >
-                    <v-progress-circular
-                      indeterminate
-                      color="grey lighten-5"
-                    ></v-progress-circular>
-                  </v-row>
-                </template>
-              </v-img>
-            </v-card>
-            <h3 class="text-center mb-0">WENEXT</h3>
-          </v-col>
-          <v-col cols="6" md="4">
-            <v-card tile flat color="transparent">
-              <v-img src="/brand/zcc.jpg">
-                <template v-slot:placeholder>
-                  <v-row
-                    class="fill-height ma-0"
-                    align="center"
-                    justify="center"
-                  >
-                    <v-progress-circular
-                      indeterminate
-                      color="grey lighten-5"
-                    ></v-progress-circular>
-                  </v-row>
-                </template>
-              </v-img>
-            </v-card>
-            <h3 class="text-center mb-0">SCC TECH</h3>
-          </v-col>
-        </v-row>
-      </v-container>
-    </section>
-  </v-container>
+      </section>
+    </v-container>
+  </section>
 </template>
 
 <script lang="ts">

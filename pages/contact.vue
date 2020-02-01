@@ -1,53 +1,51 @@
 <template>
-  <v-container class="px-1">
-    <h1>
-      {{ $t(`links.contact`) }}
-    </h1>
-    <h3 class="mt-10">{{ $t(`contact.contactUs`) }}</h3>
-    <li>{{ $t(`contact.address`) }}</li>
-    <p>{{ $t(`contact.addressDetail`) }}</p>
-    <li>E-MAIL</li>
-    <p>contact@insdim.com</p>
+  <section>
+    <v-container>
+      <h1>
+        {{ $t(`links.contact`) }}
+      </h1>
+      <h3 class="mt-10">{{ $t(`contact.contactUs`) }}</h3>
+      <li>{{ $t(`contact.address`) }}</li>
+      <p>{{ $t(`contact.addressDetail`) }}</p>
+      <li>E-MAIL</li>
+      <p>humasim@insdim.com</p>
+      <span class="caption">
+        * 设计合作、业务洽谈等请提前预约，否则恕不接待
+      </span>
 
-    <h3 class="mt-10">{{ $t(`contact.joinUs`) }}</h3>
-    <li>{{ $t(`contact.architect`) }}</li>
-    <p>
-      {{ $t(`contact.skills`) }} - AutoCAD / VectorWorks / RhinoCeros / v-ray /
-      Affinity Suite
-    </p>
+      <h3 class="mt-10">开放职位</h3>
 
-    <li>{{ $t(`contact.interiorDesigner`) }}</li>
-    <p>
-      {{ $t(`contact.skills`) }} - AUTOCAD / VECTORWORKS / V-Ray / AFFINITY
-      SUITE
-    </p>
+      <h4>- 品牌运营</h4>
+      <p>
+        要求
+      </p>
+      <li>本科及以上学历（艺术与设计类相关专业优先）</li>
+      <li>具备电商与社交平台运营基本技能，有工作经验者优先</li>
+      <li>具备一定的市场分析和判断能力，良好的客户服务意识</li>
+      <li>主动应对问题，执行力强，有较好时间管理能力</li>
+      <li>具有良好的中英文沟通能力，善于团队协作</li>
 
-    <li>{{ $t(`contact.productDesigner`) }}</li>
-    <p>
-      {{ $t(`contact.skills`) }} - RHINOCEROS / FUSION 360 / V-ray / CINEMA 4D /
-      AFFINITY SUITE
-    </p>
+      <h4 class="mt-10">- 品牌运营助理</h4>
+      <p>
+        要求
+      </p>
+      <li>在校大学生或应届毕业生（艺术与设计类相关专业优先）</li>
+      <li>具备社交平台运营基本技能，有工作经验者优先</li>
+      <li>热爱设计、艺术，视野开阔思维活跃</li>
+      <li>中英文沟通流利，具有责任感和团队合作精神</li>
 
-    <li>{{ $t(`contact.developer`) }}</li>
-    <p>
-      {{ $t(`contact.skills`) }} - javascript / css / python / golang / affinity
-      suite
-    </p>
+      <h3 class="mt-10">申请职位</h3>
+      <p>join@insdim.com</p>
+      <li>个人近期形象照</li>
+      <li>简历（可提供相关作品集最佳）</li>
 
-    <li>{{ $t(`contact.graphicDesigner`) }}</li>
-    <p>
-      {{ $t(`contact.skills`) }} - affinity suite / final cut pro x / sketch /
-      css
-    </p>
-
-    <li>{{ $t(`contact.internship`) }}</li>
-    <p>{{ $t(`contact.skills`) }} - rhinoceros / keyshot / affinity suite</p>
-
-    <h3 class="mt-10">{{ $t(`contact.application`) }}</h3>
-    <p>join@insdim.com</p>
-    <li>{{ $t(`contact.cv`) }}</li>
-    <li>{{ $t(`contact.portfolio`) }}</li>
-  </v-container>
+      <h3 class="mt-10">设计合作</h3>
+      <p>humasim@insdim.com</p>
+      <span class="caption">
+        * 请标注“设计合作”，并简要说明合作意向。
+      </span>
+    </v-container>
+  </section>
 </template>
 
 <script lang="ts">

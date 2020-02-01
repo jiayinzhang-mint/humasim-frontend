@@ -30,7 +30,7 @@ export default (context) => {
       contact: {
         address: 'address',
         addressDetail:
-          'ROOM 201, NO. 12, 1895 LANE, HUTAIZHI ROAD, JING`AN DISTRICT, SHANGHAI, CHINA',
+          'ROOM 2A, NO. 18, 1895 LANE, HUTAIZHI ROAD, JING`AN DISTRICT, SHANGHAI, CHINA',
         service: 'service',
         joinUs: 'join us ',
         contactUs: 'connect',
