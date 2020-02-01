@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-carousel cycle height="400" hide-delimiters show-arrows-on-hover>
+    <v-carousel cycle height="700" hide-delimiters show-arrows-on-hover>
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
         <v-sheet :color="colors[i]" height="100%">
           <v-row class="fill-height" align="center" justify="center">
