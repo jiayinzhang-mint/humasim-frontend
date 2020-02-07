@@ -3,7 +3,6 @@
     <v-app-bar
       :color="$vuetify.theme.dark ? `#242424` : `white`"
       elevate-on-scroll
-      absolute
       class="acrylic"
       app
       scroll-target="#content"
