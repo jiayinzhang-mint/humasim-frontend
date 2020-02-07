@@ -43,10 +43,12 @@
 
     <v-navigation-drawer
       v-model="nav"
-      stateless
+      style="z-index:9"
+      absolute
       width="100%"
       class="acrylic d-flex d-sm-none"
       app
+      @touchmove.prevent
     >
       <SideNav @closeNav="nav = false"></SideNav>
     </v-navigation-drawer>
@@ -63,7 +65,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 import '@/assets/style.css';
 
 import SideNav from '@/components/home/side-nav.vue';
