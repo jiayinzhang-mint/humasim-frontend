@@ -2,7 +2,7 @@
 
 .acrylic {
   backdrop-filter: saturate(180%) blur(20px);
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(43, 43, 43, 0.8) !important;
 }
 
 body {
@@ -168,7 +168,7 @@ hr {
 
 @media (prefers-color-scheme: dark) {
   #app {
-    background: rgb(36, 36, 36);
+    background: rgb(36, 36, 36) !important;
     color: #fff;
   }
   p {
