@@ -14,7 +14,7 @@
     >
       <v-img
         style="top:30vh;max-width:200px"
-        class="head-icon"
+        class="head-text"
         src="/HUMASIM_TEXT.svg"
       ></v-img>
       <v-list nav dense width="120" class="px-0">

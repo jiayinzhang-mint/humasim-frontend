@@ -65,6 +65,14 @@ p {
   cursor: pointer;
 }
 
+.head-text {
+  z-index: 99;
+  position: fixed !important;
+  left: 50%;
+  transform: translate(-50%, 0) !important;
+  cursor: pointer;
+}
+
 .nav-active {
   background-color: #ac759e !important;
   color: white !important;
