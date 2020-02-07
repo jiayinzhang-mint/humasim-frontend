@@ -28,12 +28,12 @@
       >
 
       <v-spacer></v-spacer>
-
+      <!-- 
       <v-btn icon>
         <v-avatar size="35">
           <v-icon color="primary" size="20">mdi-account-outline</v-icon>
         </v-avatar>
-      </v-btn>
+      </v-btn> -->
     </v-app-bar>
 
     <v-content
