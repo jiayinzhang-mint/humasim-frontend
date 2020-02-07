@@ -4,7 +4,10 @@
       <section>
         <h1>{{ $t(`links.about`) }} HUMASIM</h1>
         <v-row>
-          <v-col sm="12" md="12" lg="6">
+          <v-col class="d-flex d-sm-none" cols="12">
+            <v-img max-width="600" src="/HUMASIM_TEXT.svg"></v-img>
+          </v-col>
+          <v-col sm="12" md="8" lg="6">
             <p>
               HUMASIM（河马森林）是由设计公司INSDIM创立的自营品牌。
             </p>
@@ -21,8 +24,10 @@
             </p>
           </v-col>
 
-          <v-col sm="12" md="12" lg="6">
-            <v-img max-width="600" src="/HUMASIM_TEXT.svg"></v-img>
+          <v-col class="d-none d-sm-flex" sm="12" md="4" lg="6">
+            <v-card flat color="transparent" width="100%">
+              <v-img width="100%" src="/HUMASIM_TEXT.svg"></v-img>
+            </v-card>
           </v-col>
         </v-row>
       </section>

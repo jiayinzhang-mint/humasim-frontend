@@ -41,7 +41,13 @@
       </v-btn> -->
     </v-app-bar>
 
-    <v-navigation-drawer v-model="nav" width="100%" class="acrylic" app>
+    <v-navigation-drawer
+      v-model="nav"
+      stateless
+      width="100%"
+      class="acrylic d-flex d-sm-none"
+      app
+    >
       <SideNav @closeNav="nav = false"></SideNav>
     </v-navigation-drawer>
 
