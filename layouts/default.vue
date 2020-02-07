@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      :color="$vuetify.theme.dark ? `#242424` : `white`"
-      class="acrylic"
-      app
-    >
+    <v-app-bar class="acrylic" app>
       <v-btn icon class="d-flex d-sm-none" @click="nav = !nav">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
