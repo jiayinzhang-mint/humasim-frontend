@@ -2,10 +2,8 @@
   <v-app>
     <v-app-bar
       :color="$vuetify.theme.dark ? `#242424` : `white`"
-      elevate-on-scroll
       class="acrylic"
       app
-      scroll-target="#content"
     >
       <v-btn icon class="d-flex d-sm-none" @click="nav = !nav">
         <v-icon>mdi-menu</v-icon>
@@ -52,11 +50,7 @@
       <SideNav @closeNav="nav = false"></SideNav>
     </v-navigation-drawer>
 
-    <v-content
-      id="content"
-      class="overflow-y-auto"
-      style="height:calc(100vh - 64px)"
-    >
+    <v-content>
       <nuxt />
       <Footer></Footer>
     </v-content>
@@ -118,10 +112,6 @@ export default class Default extends Vue {
   private mounted() {
     this.detectTheme();
     this.$vuetify.icons.iconfont = 'mdi';
-
-    if (document.body.clientWidth >= 600) {
-      this.nav = true;
-    }
 
     if (process.browser) {
       window.localStorage.setItem('process', 'browser');
