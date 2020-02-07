@@ -2,7 +2,7 @@
 
 .acrylic {
   backdrop-filter: saturate(180%) blur(20px);
-  opacity: 0.85;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 body {
@@ -183,6 +183,10 @@ hr {
   }
   hr {
     border-top: 1px solid #313131;
+  }
+  .acrylic {
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(255, 255, 255, 0.8);
   }
 }
 
