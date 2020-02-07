@@ -1,54 +1,36 @@
 <template>
-  <v-container class="pl-10 pt-12">
-    <v-img class="mb-12 mt-3" width="120" height="120" src="/icon.png"></v-img>
-
-    <v-layout>
-      <v-list dense width="120" class="px-0">
+  <v-container style="height:100vh" class="py-0">
+    <v-toolbar dense flat color="transparent">
+      <v-spacer></v-spacer>
+      <v-btn icon small @click="$emit('closeNav')">
+        <v-icon>mdi-close</v-icon>
+      </v-btn>
+    </v-toolbar>
+    <v-row
+      no-gutters
+      style="height:calc(100vh - 48px)"
+      justify="center"
+      align="center"
+    >
+      <v-img
+        style="top:30vh;max-width:200px"
+        class="head-icon"
+        src="/HUMASIM_TEXT.svg"
+      ></v-img>
+      <v-list nav dense width="120" class="px-0">
         <v-list-item
           v-for="(item, i) in navItems"
           :key="`n-${i}`"
           class="px-2"
           active-class="nav-active"
-          :to="localePath(item.path)"
+          :to="localePath(item.route)"
         >
-          <v-list-item-title class="nav-link">{{
-            $t(item.title)
+          <v-list-item-title class="nav-link text-center">{{
+            item.text
           }}</v-list-item-title>
         </v-list-item>
       </v-list>
-      <!-- <v-list nav dense class="mt-11">
-        <v-list-item
-          v-for="(item, i) in yearList"
-          :key="`y-${i}`"
-          active-class="nav-active"
-          :to="`${localePath('collection')}/${item}`"
-        >
-          <v-list-item-title class="nav-link">{{ item }}</v-list-item-title>
-        </v-list-item>
-        <v-list-item :to="`${localePath('collection')}/older`">
-          <v-list-item-title class="nav-link">{{
-            $t('collection.older')
-          }}</v-list-item-title>
-        </v-list-item>
-      </v-list> -->
-    </v-layout>
-
-    <v-list dense width="60" class="px-0">
-      <v-list-item
-        :class="
-          `${locale === 'cn' ? `nav-active v-list-item--active` : ``} px-2`
-        "
-        @click="switchLocale('cn')"
-        ><v-list-item-title>CN</v-list-item-title></v-list-item
-      >
-      <v-list-item
-        :class="
-          `${locale === 'en' ? `nav-active v-list-item--active` : ``} px-2`
-        "
-        @click="switchLocale('en')"
-        ><v-list-item-title>EN</v-list-item-title></v-list-item
-      >
-    </v-list>
+    </v-row>
   </v-container>
 </template>
 
@@ -61,24 +43,20 @@ export default class HomeSideNav extends Vue {
   private get navItems() {
     return [
       {
-        path: 'news',
-        title: 'links.news'
+        text: '主页',
+        route: '/'
       },
       {
-        path: 'collection',
-        title: 'links.collection'
+        text: '产品',
+        route: '/product'
       },
       {
-        path: 'timeline',
-        title: 'links.timeline'
+        text: '关于',
+        route: '/about'
       },
       {
-        path: 'about',
-        title: 'links.about'
-      },
-      {
-        path: 'contact',
-        title: 'links.contact'
+        text: '联系',
+        route: '/contact'
       }
     ];
   }

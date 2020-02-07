@@ -4,9 +4,14 @@
       :color="$vuetify.theme.dark ? `#242424` : `white`"
       elevate-on-scroll
       absolute
+      class="acrylic"
       app
       scroll-target="#content"
     >
+      <v-btn icon class="d-flex d-sm-none" @click="nav = !nav">
+        <v-icon>mdi-menu</v-icon>
+      </v-btn>
+
       <v-hover v-slot:default="{ hover }">
         <v-card
           :elevation="hover ? 6 : 2"
@@ -36,6 +41,10 @@
       </v-btn> -->
     </v-app-bar>
 
+    <v-navigation-drawer v-model="nav" width="100%" class="acrylic" app>
+      <SideNav @closeNav="nav = false"></SideNav>
+    </v-navigation-drawer>
+
     <v-content
       id="content"
       class="overflow-y-auto"
@@ -51,10 +60,11 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import '@/assets/style.css';
 
+import SideNav from '@/components/home/side-nav.vue';
 import Footer from '@/components/home/footer.vue';
 
 @Component({
-  components: { Footer }
+  components: { SideNav, Footer }
 })
 export default class Default extends Vue {
   private nav: boolean = false;
