@@ -1,15 +1,30 @@
 class Product {
   id!: string;
+
   title!: string;
-  createdAt!: string;
-  visibility!: boolean;
-  client!: string;
-  collaborator!: string;
+  titleEn!: string;
+
   description!: string;
   descriptionEn!: string;
-  videoLink!: string;
+
+  createdAt!: string;
+
+  size!: number;
+  weight!: number;
+  priceShow!: number;
+
+  visibility!: boolean;
+
   pic?: string[];
   titlePic?: string;
+
+  extraInfo!: ProductExtraInfo;
+}
+
+class ProductExtraInfo {
+  tag!: string[];
+  material!: string[];
+  color!: string[];
 }
 
 export { Product };

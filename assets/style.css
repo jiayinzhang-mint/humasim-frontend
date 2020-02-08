@@ -186,7 +186,7 @@ hr {
   }
   .acrylic {
     backdrop-filter: saturate(180%) blur(20px);
-    background: rgba(37, 37, 37, 0.8);
+    background: rgba(37, 37, 37, 0.8) !important;
   }
 }
 
