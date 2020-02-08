@@ -76,7 +76,7 @@
                   <p class="text-center">{{ item.title }}</p>
 
                   <v-card-text class="text-center pt-0">
-                    ¥ {{ item.priceShow.toFixed(2) }}
+                    ¥ {{ (item.priceShow || 0).toFixed(2) }}
                   </v-card-text>
                 </v-card>
               </v-hover>

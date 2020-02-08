@@ -133,6 +133,13 @@ export default {
     cache: true,
     parallel: true,
     hardSource: true,
+    terser: {
+      terserOptions: {
+        compress: {
+          drop_console: true
+        }
+      }
+    },
     /*
      ** You can extend webpack config here
      */
