@@ -2,7 +2,7 @@
 
 .acrylic {
   backdrop-filter: saturate(180%) blur(20px);
-  background: rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 body {
