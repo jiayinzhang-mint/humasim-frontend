@@ -2,10 +2,14 @@
   <div>
     <v-container>
       <section>
-        <h1>{{ $t(`links.about`) }} HUMASIM</h1>
+        <h1 class="d-none d-sm-flex">{{ $t(`links.about`) }} HUMASIM</h1>
         <v-row>
           <v-col class="d-flex d-sm-none" cols="12">
-            <v-img max-width="600" src="/HUMASIM_TEXT.svg"></v-img>
+            <v-card width="100%" flat color="transparent">
+              <v-container class="px-10">
+                <v-img max-width="600" src="/HUMASIM_TEXT.svg"></v-img>
+              </v-container>
+            </v-card>
           </v-col>
           <v-col sm="12" md="8" lg="6">
             <p>
