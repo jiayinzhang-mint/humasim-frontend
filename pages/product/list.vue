@@ -58,27 +58,39 @@
         </v-col>
 
         <v-col md="8" sm="12">
-          <v-row dense>
+          <v-row>
             <v-col
               v-for="(item, i) in productList"
               :key="`p-${i}`"
               cols="6"
               sm="6"
-              md="4"
+              md="6"
+              class="mt-7"
             >
               <v-hover v-slot:default="{ hover }">
-                <v-card outlined :elevation="hover ? 3 : 0">
-                  <v-responsive aspect-ratio="1">
-                    <v-card height="100%" color="primary">
-                      <v-img
-                        :src="
-                          `https://static.insdim.com/image?path=${item.id}/${item.titlePic}`
-                        "
-                      ></v-img>
-                    </v-card>
-                  </v-responsive>
+                <v-card color="transparent" flat :elevation="hover ? 3 : 0">
+                  <v-card flat>
+                    <v-img
+                      :src="
+                        `https://static.insdim.com/image?path=${item.id}/${item.titlePic}`
+                      "
+                    >
+                      <template v-slot:placeholder>
+                        <v-row
+                          class="fill-height ma-0"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-progress-circular
+                            indeterminate
+                            color="primary"
+                          ></v-progress-circular>
+                        </v-row>
+                      </template>
+                    </v-img>
+                  </v-card>
 
-                  <p class="text-center">{{ item.titleEn }}</p>
+                  <p class="text-center mt-6">{{ item.titleEn }}</p>
                   <p class="text-center">{{ item.title }}</p>
 
                   <v-card-text class="text-center pt-0">
