@@ -69,7 +69,13 @@
               <v-hover v-slot:default="{ hover }">
                 <v-card outlined :elevation="hover ? 3 : 0">
                   <v-responsive aspect-ratio="1">
-                    <v-card height="100%" color="primary"> </v-card>
+                    <v-card height="100%" color="primary">
+                      <v-img
+                        :src="
+                          `https://static.insdim.com/image?path=${item.id}/${item.titlePic}`
+                        "
+                      ></v-img>
+                    </v-card>
                   </v-responsive>
 
                   <p class="text-center">{{ item.titleEn }}</p>
