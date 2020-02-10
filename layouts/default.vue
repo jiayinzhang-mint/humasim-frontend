@@ -37,7 +37,7 @@
     <v-navigation-drawer
       v-model="nav"
       style="z-index:9"
-      absolute
+      fixed
       width="100%"
       class="acrylic d-flex d-sm-none"
       app

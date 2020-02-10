@@ -2,15 +2,15 @@
   <div>
     <v-container>
       <section>
-        <h1 class="d-none d-sm-flex">{{ $t(`links.about`) }} HUMASIM</h1>
+        <h1>{{ $t(`links.about`) }} HUMASIM</h1>
         <v-row>
-          <v-col class="d-flex d-sm-none" cols="12">
+          <!-- <v-col class="d-flex d-sm-none pb-10" cols="12">
             <v-card width="100%" flat color="transparent">
               <v-container class="px-10">
                 <v-img max-width="600" src="/HUMASIM_TEXT.svg"></v-img>
               </v-container>
             </v-card>
-          </v-col>
+          </v-col> -->
           <v-col sm="12" md="8" lg="6">
             <p>
               HUMASIM（河马森林）是由设计公司INSDIM创立的自营品牌。
@@ -48,6 +48,19 @@
               <v-card-text class="caption">
                 <p>HUMASIM 创始人</p>
                 <p>INSDIM 设计师</p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+
+          <v-col sm="6" md="6" lg="3">
+            <v-card outlined flat>
+              <v-img src="INSDIM.png"></v-img>
+              <v-card-title class="subtitle-1 font-weight-black pb-0">
+                INSDIM
+              </v-card-title>
+              <v-card-text class="caption">
+                <p>A DESIGN COMPANY</p>
+                <p>整合设计服务</p>
               </v-card-text>
             </v-card>
           </v-col>

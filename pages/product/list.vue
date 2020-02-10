@@ -1,5 +1,60 @@
 <template>
   <section>
+    <!-- mobile toolbar -->
+    <v-toolbar v-if="$vuetify.breakpoint.xsOnly" dense flat color="transparent">
+      <span class="caption">分类</span>
+      <v-menu top>
+        <template v-slot:activator="{ on }">
+          <v-btn class="ml-2" text v-on="on">
+            {{ tagName }} <v-icon>mdi-chevron-down</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list dense>
+          <v-list-item
+            v-for="(item, i) in tagList"
+            :key="`t-${i}`"
+            :class="`${$route.query.tag == item.value ? `nav-active` : ``}`"
+            :to="{
+              path: '/product/list',
+              query: {
+                page: page,
+                tag: item.value
+              }
+            }"
+          >
+            <v-list-item-title class="subtitle-1"
+              >{{ item.icon }}
+              <span class="body-2">{{ item.text }}</span></v-list-item-title
+            >
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      <v-spacer></v-spacer>
+      <v-btn
+        small
+        outlined
+        @click="
+          $router.push({ path: '/product/list', query: { page: '1' } });
+          keyword = '';
+        "
+        >清除</v-btn
+      >
+    </v-toolbar>
+    <v-toolbar v-if="$vuetify.breakpoint.xsOnly" dense flat color="transparent">
+      <v-text-field
+        v-model="keyword"
+        solo-inverted
+        dense
+        single-line
+        hide-details
+        append-outer-icon="mdi-magnify"
+        label="关键词"
+        @keyup.enter="getProductList"
+        @click:append-outer="getProductList"
+      ></v-text-field>
+    </v-toolbar>
+
     <v-container>
       <v-row dense>
         <v-col cols="3" class="hidden-sm-and-down">
@@ -58,7 +113,7 @@
         </v-col>
 
         <v-col md="8" sm="12">
-          <v-row>
+          <v-row :dense="$vuetify.breakpoint.xsOnly">
             <v-col
               v-for="(item, i) in productList"
               :key="`p-${i}`"
@@ -209,6 +264,16 @@ export default class WorkIndex extends Vue {
 
   get tag() {
     return this.$route.query.tag as string;
+  }
+
+  get tagName() {
+    const t = this.tagList.find((e) => {
+      return e.value === this.tag;
+    });
+    if (t === undefined) {
+      return `所有`;
+    }
+    return `${t?.icon}  ${t?.text}`;
   }
 
   @Watch('page')
