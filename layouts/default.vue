@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar class="acrylic" app>
-      <v-btn icon class="d-flex d-sm-none" @click="nav = !nav">
+      <v-btn icon class="d-flex d-md-none" @click="nav = !nav">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
 
@@ -39,7 +39,7 @@
       style="z-index:9"
       fixed
       width="100%"
-      class="acrylic d-flex d-sm-none"
+      class="acrylic d-flex d-md-none"
       app
       @touchmove.prevent
     >
