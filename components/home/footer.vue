@@ -1,32 +1,32 @@
 <template>
   <v-container class="mb-10" style="margin-top:100px">
-    <v-row>
-      <v-col sm="12" md="6" lg="6">
-        <v-menu open-on-hover top offset-y>
-          <template v-slot:activator="{ on }">
-            <v-btn large icon v-on="on"><v-icon>mdi-wechat</v-icon></v-btn>
-          </template>
-
-          <v-card>
-            <v-img width="200" src="/qrcode.jpg"></v-img>
+    <v-row justify="center" no-gutters>
+      <v-col cols="12">
+        <v-row justify="center">
+          <v-card flat color="transparent">
+            <v-img width="150px" src="/HUMASIM_TEXT.svg"></v-img>
           </v-card>
-        </v-menu>
-        <h4>A: 上海市静安区沪太支路1895弄18号2A室</h4>
-        <h4>E: humasim@insdim.com</h4>
+        </v-row>
       </v-col>
 
-      <v-col
-        sm="12"
-        md="6"
-        lg="6"
-        :class="$vuetify.breakpoint.xsOnly ? `mt-10` : ``"
-      >
-        <v-card max-width="150" flat color="transparent">
-          <v-img src="/HUMASIM_TEXT.svg"></v-img>
-        </v-card>
-        <h5 class="text-left mt-10">COPYRIGHT © {{ thisYear }} HUMASIM&reg;</h5>
+      <v-col cols="12" class="mt-3">
+        <v-row justify="center">
+          <v-menu open-on-hover top offset-y>
+            <template v-slot:activator="{ on }">
+              <v-btn icon v-on="on"><v-icon>mdi-wechat</v-icon></v-btn>
+            </template>
+
+            <v-card>
+              <v-img width="200" src="/qrcode.jpg"></v-img>
+            </v-card>
+          </v-menu>
+        </v-row>
+      </v-col>
+
+      <v-col cols="12" class="mt-3">
+        <h5 class="text-center">COPYRIGHT © {{ thisYear }} HUMASIM&reg;</h5>
         <!-- <h4 class="text-center">FORM INSIDE FUNCTION</h4> -->
-        <h5 class="text-left">
+        <h5 class="text-center">
           <a href="http://www.beian.miit.gov.cn" target="_blank">
             沪ICP备16025975号-1</a
           >

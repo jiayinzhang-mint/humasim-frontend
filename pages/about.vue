@@ -30,7 +30,7 @@
 
           <v-col class="d-none d-sm-flex" sm="12" md="4" lg="6">
             <v-card flat color="transparent" width="100%">
-              <v-img width="100%" src="/HUMASIM_TEXT.svg"></v-img>
+              <v-img width="90%" src="/HUMASIM_TEXT.svg"></v-img>
             </v-card>
           </v-col>
         </v-row>

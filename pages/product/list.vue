@@ -1,7 +1,12 @@
 <template>
   <section>
     <!-- mobile toolbar -->
-    <v-toolbar v-if="$vuetify.breakpoint.xsOnly" dense flat color="transparent">
+    <v-toolbar
+      v-if="$vuetify.breakpoint.width < 1000"
+      dense
+      flat
+      color="transparent"
+    >
       <span class="caption">分类</span>
       <v-menu top>
         <template v-slot:activator="{ on }">
@@ -41,7 +46,12 @@
         >清除</v-btn
       >
     </v-toolbar>
-    <v-toolbar v-if="$vuetify.breakpoint.xsOnly" dense flat color="transparent">
+    <v-toolbar
+      v-if="$vuetify.breakpoint.width < 1000"
+      dense
+      flat
+      color="transparent"
+    >
       <v-text-field
         v-model="keyword"
         solo-inverted
@@ -55,10 +65,10 @@
       ></v-text-field>
     </v-toolbar>
 
-    <v-container>
-      <v-row dense>
+    <v-container class="py-0">
+      <v-row dense class="py-0">
         <v-col cols="3" class="hidden-sm-and-down">
-          <v-card style="position:fixed" flat color="transparent" class="mt-5">
+          <v-card style="position:fixed" flat color="transparent">
             <v-toolbar dense flat color="transparent">
               <v-toolbar-title
                 style="margin-left:-16px"
@@ -113,7 +123,7 @@
         </v-col>
 
         <v-col md="8" sm="12">
-          <v-row :dense="$vuetify.breakpoint.xsOnly">
+          <v-row :dense="$vuetify.breakpoint.width < 1000">
             <v-col
               v-for="(item, i) in productList"
               :key="`p-${i}`"
@@ -156,7 +166,7 @@
             </v-col>
           </v-row>
 
-          <v-toolbar flat color="transparent">
+          <v-toolbar dense flat color="transparent">
             <v-spacer></v-spacer>
             <v-btn
               :disabled="page == 1"

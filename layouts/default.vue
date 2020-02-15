@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar class="acrylic" app>
+    <v-app-bar class="acrylic" app color="rgba(255,255,255,0.8)">
       <v-btn icon class="d-flex d-md-none" @click="nav = !nav">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
@@ -19,7 +19,7 @@
       <v-btn
         v-for="(item, i) in navList"
         :key="`n-${i}`"
-        class="hidden-sm-and-down"
+        class="hidden-sm-and-down mr-1"
         text
         :to="localePath(item.route)"
         >{{ item.text }}</v-btn

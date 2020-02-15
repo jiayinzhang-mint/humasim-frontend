@@ -2,7 +2,6 @@
 
 .acrylic {
   backdrop-filter: saturate(180%) blur(20px);
-  background: rgba(255, 255, 255, 0.8);
 }
 
 body {
@@ -60,6 +59,14 @@ p {
   z-index: 99;
   position: absolute !important;
   border-radius: 60px !important;
+  left: 50%;
+  transform: translate(-50%, 0) !important;
+  cursor: pointer;
+}
+
+.bottom-logo {
+  z-index: 99;
+  position: absolute !important;
   left: 50%;
   transform: translate(-50%, 0) !important;
   cursor: pointer;
