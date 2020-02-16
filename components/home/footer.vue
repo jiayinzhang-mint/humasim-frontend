@@ -20,6 +20,14 @@
               <v-img width="200" src="/qrcode.jpg"></v-img>
             </v-card>
           </v-menu>
+
+          <v-btn
+            icon
+            class="ml-2"
+            @click="open('https://weibo.com/u/6493628657')"
+          >
+            <v-icon>mdi-sina-weibo</v-icon>
+          </v-btn>
         </v-row>
       </v-col>
 
@@ -43,6 +51,10 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class HomeFooter extends Vue {
   private get thisYear() {
     return new Date().getFullYear();
+  }
+
+  private open(l: string) {
+    window.open(l, '_blank');
   }
 }
 </script>
