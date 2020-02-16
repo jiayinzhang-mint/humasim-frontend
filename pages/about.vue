@@ -28,7 +28,7 @@
             </p>
           </v-col>
 
-          <v-col class="d-none d-sm-flex" sm="12" md="4" lg="6">
+          <v-col class="hidden-md-and-down" sm="12" md="4" lg="6">
             <v-card flat color="transparent" width="100%">
               <v-img width="90%" src="/HUMASIM_TEXT.svg"></v-img>
             </v-card>

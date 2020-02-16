@@ -2,7 +2,7 @@
   <section>
     <!-- mobile toolbar -->
     <v-toolbar
-      v-if="$vuetify.breakpoint.width < 1000"
+      v-if="$vuetify.breakpoint.smAndDown"
       dense
       flat
       color="transparent"
@@ -47,7 +47,7 @@
       >
     </v-toolbar>
     <v-toolbar
-      v-if="$vuetify.breakpoint.width < 1000"
+      v-if="$vuetify.breakpoint.smAndDown"
       dense
       flat
       color="transparent"
@@ -123,7 +123,7 @@
         </v-col>
 
         <v-col md="8" sm="12">
-          <v-row :dense="$vuetify.breakpoint.width < 1000">
+          <v-row :dense="$vuetify.breakpoint.smAndDown">
             <v-col
               v-for="(item, i) in productList"
               :key="`p-${i}`"
