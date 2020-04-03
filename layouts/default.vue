@@ -41,7 +41,7 @@
 
     <v-navigation-drawer
       v-model="nav"
-      style="z-index: 9;"
+      style="z-index: 9; transform: none;"
       fixed
       width="100%"
       class="acrylic d-flex d-md-none"
