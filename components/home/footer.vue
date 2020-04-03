@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mb-10" style="margin-top:100px">
+  <v-container class="mb-10" style="margin-top: 100px;">
     <v-row justify="center" no-gutters>
       <v-col cols="12">
         <v-row justify="center">

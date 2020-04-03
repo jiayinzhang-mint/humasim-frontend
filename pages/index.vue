@@ -99,8 +99,8 @@ export default class Index extends Vue {
     {
       type: 'center',
       objectPic: '/slide/HUMASIM_LOGO_W.svg',
-      subtitle: 'brand of insdim, a design company.'
-    }
+      subtitle: 'brand of insdim, a design company.',
+    },
   ];
 
   private get locale() {

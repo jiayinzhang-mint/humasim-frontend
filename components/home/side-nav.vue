@@ -1,5 +1,5 @@
 <template>
-  <v-container style="height:100vh" class="py-0">
+  <v-container style="height: 100vh;" class="py-0">
     <v-toolbar dense flat color="transparent">
       <v-spacer></v-spacer>
       <v-btn icon small @click="$emit('closeNav')">
@@ -8,12 +8,12 @@
     </v-toolbar>
     <v-row
       no-gutters
-      style="height:calc(100vh - 48px)"
+      style="height: calc(100vh - 48px);"
       justify="center"
       align="center"
     >
       <v-img
-        style="top:30vh;max-width:200px"
+        style="top: 30vh; max-width: 200px;"
         class="head-text"
         src="/HUMASIM_TEXT.svg"
       ></v-img>
@@ -44,20 +44,20 @@ export default class HomeSideNav extends Vue {
     return [
       {
         text: '主页',
-        route: '/'
+        route: '/',
       },
       {
         text: '产品',
-        route: '/product'
+        route: '/product',
       },
       {
         text: '关于',
-        route: '/about'
+        route: '/about',
       },
       {
         text: '联系',
-        route: '/contact'
-      }
+        route: '/contact',
+      },
     ];
   }
 
@@ -69,7 +69,7 @@ export default class HomeSideNav extends Vue {
       thisYear - 2,
       thisYear - 3,
       thisYear - 4,
-      thisYear - 5
+      thisYear - 5,
     ];
   }
 

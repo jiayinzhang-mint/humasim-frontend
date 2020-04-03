@@ -1,6 +1,11 @@
 <template>
   <v-app>
-    <v-app-bar class="acrylic" app color="rgba(255,255,255,0.8)">
+    <v-app-bar
+      style="transform: none;"
+      class="acrylic"
+      app
+      color="rgba(255,255,255,0.8)"
+    >
       <v-btn icon class="d-flex d-md-none" @click="nav = !nav">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
@@ -36,7 +41,7 @@
 
     <v-navigation-drawer
       v-model="nav"
-      style="z-index:9"
+      style="z-index: 9;"
       fixed
       width="100%"
       class="acrylic d-flex d-md-none"
@@ -61,7 +66,7 @@ import SideNav from '@/components/home/side-nav.vue';
 import Footer from '@/components/home/footer.vue';
 
 @Component({
-  components: { SideNav, Footer }
+  components: { SideNav, Footer },
 })
 export default class Default extends Vue {
   private nav: boolean = false;
@@ -69,20 +74,20 @@ export default class Default extends Vue {
   private navList = [
     {
       text: '主页',
-      route: '/'
+      route: '/',
     },
     {
       text: '产品',
-      route: '/product'
+      route: '/product',
     },
     {
       text: '关于',
-      route: '/about'
+      route: '/about',
     },
     {
       text: '联系',
-      route: '/contact'
-    }
+      route: '/contact',
+    },
   ];
 
   private iconTrick() {

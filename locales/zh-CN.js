@@ -9,23 +9,23 @@ export default (context) => {
         address: '地址',
         timeline: '年表',
         en: 'en',
-        cn: 'cn'
+        cn: 'cn',
       },
       news: {
         learnMore: '了解更多',
-        backHome: '回到首页'
+        backHome: '回到首页',
       },
       collection: {
         older: '更多',
         backHome: '回到陈列',
         collaborator: '合作伙伴:',
-        client: '客户:'
+        client: '客户:',
       },
       about: {
         ourDimension: '我们的“维度”',
         serviceContent: '空间 // 产品 // 平面 // 开发',
         subsidiaries: '旗下品牌',
-        partners: '合作伙伴'
+        partners: '合作伙伴',
       },
       contact: {
         address: '地址',
@@ -44,13 +44,13 @@ export default (context) => {
 
         application: '申请职位',
         cv: '个人简历',
-        portfolio: '作品集'
+        portfolio: '作品集',
       },
       timeline: {
         chiefDesigner: '设计代表 - 林舒安',
         awards: '奖项',
-        exhibition: '展览'
-      }
+        exhibition: '展览',
+      },
     });
   });
 };

@@ -3,7 +3,7 @@ import colors from 'vuetify/es5/util/colors';
 export default {
   server: {
     port: 3001, // default: 3000
-    host: '0.0.0.0' // default: localhost
+    host: '0.0.0.0', // default: localhost
   },
   mode: 'universal',
   /*
@@ -18,10 +18,10 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'HUMASIM official site'
-      }
+        content: 'HUMASIM official site',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Customize the progress-bar color
@@ -50,8 +50,8 @@ export default {
         //   memoryLimit: 4096,
         //   workers: 4
         // }
-      }
-    ]
+      },
+    ],
   ],
   /*
    ** Nuxt.js modules
@@ -69,27 +69,27 @@ export default {
         locales: [
           {
             code: 'en',
-            file: 'en-US.js'
+            file: 'en-US.js',
           },
           {
             code: 'cn',
-            file: 'zh-CN.js'
-          }
+            file: 'zh-CN.js',
+          },
         ],
         lazy: true,
-        langDir: 'locales/'
-      }
-    ]
+        langDir: 'locales/',
+      },
+    ],
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    proxy: true
+    proxy: true,
   },
   proxy: {
-    '/api/': 'http://127.0.0.1:9090'
+    '/api/': 'http://127.0.0.1:9090',
   },
 
   /*
@@ -107,7 +107,7 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          success: colors.green.accent3,
         },
         light: {
           primary: '#AE689D',
@@ -116,15 +116,15 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
+          success: colors.green.accent3,
+        },
+      },
     },
     defaultAssets: false,
     treeShake: true,
     options: {
-      customProperties: true
-    }
+      customProperties: true,
+    },
   },
   /*
    ** Build configuration
@@ -136,13 +136,13 @@ export default {
     terser: {
       terserOptions: {
         compress: {
-          drop_console: true
-        }
-      }
+          drop_console: true,
+        },
+      },
     },
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
-  }
+    extend(config, ctx) {},
+  },
 };

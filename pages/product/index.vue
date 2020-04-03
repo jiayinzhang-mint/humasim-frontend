@@ -11,8 +11,8 @@ export default class WorkIndex extends Vue {
     this.$router.push({
       path: `/product/list`,
       query: {
-        page: '1'
-      }
+        page: '1',
+      },
     });
   }
 }

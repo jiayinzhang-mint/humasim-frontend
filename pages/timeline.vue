@@ -80,7 +80,7 @@ export default class Index extends Vue {
   private timeline = {
     chiefDesigner: [],
     awards: [],
-    exhibition: []
+    exhibition: [],
   };
 
   private async getTimeline() {

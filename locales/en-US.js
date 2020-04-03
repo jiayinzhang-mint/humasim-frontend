@@ -9,23 +9,23 @@ export default (context) => {
         address: 'address',
         timeline: 'timeline',
         en: 'en',
-        cn: 'cn'
+        cn: 'cn',
       },
       news: {
         learnMore: 'learn more',
-        backHome: 'back home'
+        backHome: 'back home',
       },
       collection: {
         older: 'older',
         backHome: 'back home',
         collaborator: 'collaborator',
-        client: 'client'
+        client: 'client',
       },
       about: {
         ourDimension: 'our dimension',
         serviceContent: 'spatial // product // graphic // development',
         subsidiaries: 'subsidiaries',
-        partners: 'partners'
+        partners: 'partners',
       },
       contact: {
         address: 'address',
@@ -45,13 +45,13 @@ export default (context) => {
 
         application: 'application',
         cv: 'c.v.',
-        portfolio: 'portfolio'
+        portfolio: 'portfolio',
       },
       timeline: {
         chiefDesigner: 'chief designer - LIN',
         awards: 'awards',
-        exhibition: 'exhibition'
-      }
+        exhibition: 'exhibition',
+      },
     });
   });
 };

@@ -24,8 +24,8 @@
               path: '/product/list',
               query: {
                 page: page,
-                tag: item.value
-              }
+                tag: item.value,
+              },
             }"
           >
             <v-list-item-title class="subtitle-1"
@@ -68,17 +68,17 @@
     <v-container class="py-0">
       <v-row dense class="py-0">
         <v-col cols="3" class="hidden-sm-and-down">
-          <v-card style="position:fixed" flat color="transparent">
+          <v-card style="position: fixed;" flat color="transparent">
             <v-toolbar dense flat color="transparent">
               <v-toolbar-title
-                style="margin-left:-16px"
+                style="margin-left: -16px;"
                 class="headline font-weight-black"
                 >筛选</v-toolbar-title
               >
               <v-spacer></v-spacer>
               <v-btn
                 small
-                style="margin-right:-16px"
+                style="margin-right: -16px;"
                 outlined
                 @click="
                   $router.push({ path: '/product/list', query: { page: '1' } });
@@ -109,8 +109,8 @@
                   path: '/product/list',
                   query: {
                     page: page,
-                    tag: item.value
-                  }
+                    tag: item.value,
+                  },
                 }"
               >
                 <v-list-item-title class="subtitle-1"
@@ -136,9 +136,7 @@
                 <v-card color="transparent" flat :elevation="hover ? 3 : 0">
                   <v-card flat>
                     <v-img
-                      :src="
-                        `https://static.insdim.com/image?path=${item.id}/${item.titlePic}`
-                      "
+                      :src="`https://static.insdim.com/image?path=${item.id}/${item.titlePic}`"
                     >
                       <template v-slot:placeholder>
                         <v-row
@@ -174,7 +172,7 @@
               @click="
                 $router.push({
                   path: `/product/list`,
-                  query: { page: page - 1, keyword: keyword, tag: tag }
+                  query: { page: page - 1, keyword: keyword, tag: tag },
                 })
               "
               ><v-icon>mdi-chevron-left</v-icon></v-btn
@@ -188,7 +186,7 @@
               @click="
                 $router.push({
                   path: `/product/list`,
-                  query: { page: page + 1, keyword: keyword, tag: tag }
+                  query: { page: page + 1, keyword: keyword, tag: tag },
                 })
               "
               ><v-icon>mdi-chevron-right</v-icon>
@@ -214,38 +212,38 @@ export default class WorkIndex extends Vue {
     {
       icon: '👀',
       text: '店长推荐',
-      value: 'recommand'
+      value: 'recommand',
     },
     {
       icon: '🏠',
       text: '妙趣生活',
-      value: 'life'
+      value: 'life',
     },
     {
       icon: '🪀',
       text: '创意小物',
-      value: 'creative'
+      value: 'creative',
     },
     {
       icon: '👩🏻‍🎨',
       text: '大艺术家',
-      value: 'art'
+      value: 'art',
     },
     {
       icon: '🥳',
       text: '礼物专区',
-      value: 'gift'
+      value: 'gift',
     },
     {
       icon: '🥺',
       text: '销量堪忧',
-      value: 'sale'
+      value: 'sale',
     },
     {
       icon: '🔞',
       text: '小孩别看',
-      value: 'adult'
-    }
+      value: 'adult',
+    },
   ];
 
   async getProductList() {
@@ -254,8 +252,8 @@ export default class WorkIndex extends Vue {
       query: {
         page: String(this.page),
         keyword: this.keyword,
-        tag: this.tag
-      }
+        tag: this.tag,
+      },
     });
     const rsp = await ProductService.getProductList(
       new Product(),
