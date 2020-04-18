@@ -13,18 +13,12 @@
           </v-col> -->
           <v-col sm="12" md="8" lg="6">
             <p>
-              HUMASIM（河马森林）是由设计公司INSDIM创立的自营品牌。
+              HUMASIM（河马森林）成立于2017年，初衷是搜寻鲜活创意并将其传递至人们的生活，期望通过这种传递，使更多人体味到“
+              生活，本来就很有趣。”
             </p>
             <p>
-              我们旨在搜寻鲜活的创意，将他们做成产品，传递到更多人的生活中。
-            </p>
-
-            <p>
-              这些创意也许来自不经意间的巧思，或是生活中某个不起眼的角落。
-            </p>
-
-            <p>
-              我们希望通过这种传递，使更多人体会到 “生活，本来就很有趣。”
+              2019年，HUMASIM
+              开始了“设计同行”计划，希望通过与设计机构、设计师品牌、优秀设计师和设计新锐等各方设计力量的合作，共同探索设计为日常生活带来趣味性的更多可能。
             </p>
           </v-col>
 
@@ -51,7 +45,36 @@
               </v-card-text>
             </v-card>
           </v-col>
+          <v-col sm="6" md="6" lg="3">
+            <v-card outlined flat>
+              <v-img src="bug.jpg"></v-img>
+              <v-card-title class="subtitle-1 font-weight-black pb-0">
+                林舒安
+              </v-card-title>
+              <v-card-text class="caption">
+                <p>产品设计师</p>
+                <p>INSDIM 设计代表</p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+          <v-col sm="6" md="6" lg="3">
+            <v-card outlined flat>
+              <v-img src="zanwen.jpg"></v-img>
+              <v-card-title class="subtitle-1 font-weight-black pb-0">
+                李赞文
+              </v-card-title>
+              <v-card-text class="caption">
+                <p>产品设计师</p>
+                <p>ZAN DESIGN 负责人</p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </section>
 
+      <section>
+        <h1>设计机构</h1>
+        <v-row>
           <v-col sm="6" md="6" lg="3">
             <v-card outlined flat>
               <v-img src="INSDIM.png"></v-img>
@@ -61,6 +84,18 @@
               <v-card-text class="caption">
                 <p>A DESIGN COMPANY</p>
                 <p>整合设计服务</p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+          <v-col sm="6" md="6" lg="3">
+            <v-card outlined flat>
+              <v-img src="ZAN.png"></v-img>
+              <v-card-title class="subtitle-1 font-weight-black pb-0">
+                ZAN DESIGN
+              </v-card-title>
+              <v-card-text class="caption">
+                <p>知名设计工作室</p>
+                <p>产品设计服务</p>
               </v-card-text>
             </v-card>
           </v-col>
