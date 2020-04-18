@@ -31,7 +31,12 @@
       </section>
 
       <section>
-        <h1>设计师</h1>
+        <h1>
+          设计师
+          <span class="caption font-weight-black grey--text"
+            >含“设计同行”计划成员</span
+          >
+        </h1>
         <v-row>
           <v-col sm="6" md="6" lg="3">
             <v-card outlined flat>
